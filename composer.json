@@ -1,0 +1,20 @@
+{
+	"name" : "just-core/stub",
+	"description" : "Stub application",
+	"license" : "GNU",
+	"keywords" : [
+		"Stub",
+		"just-core"
+	],
+	"version" : "1.0.0",
+	"require" : {
+		"php" : ">=5.3.3",
+		"just-core/foundation" : "dev-namespace"
+	},
+	"autoload" : {
+		"classmap" : [
+			
+		]
+	}
+}
+
