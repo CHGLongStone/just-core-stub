@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * CONFIG_MANAGER (JCORE) CLASS
  * @author	Jason Medland<jason.medland@gmail.com>
@@ -14,31 +14,38 @@
 * file is stored in the TLD, use relative paths do NOT add env.php to source control
 */
 if(!include('../env.php') ){
-	$ENVPATH = '';
+	$ENVPATH = '/var/www/JCORE';
+	$CACHEPATH = '/var/www/JCORE';
+	$PLUGINSPATH = '/var/www/JCORE';
+	$PACKAGESPATH = '/var/www/JCORE';
+	$LOGPATH = '/var/log/httpd/';
+	
 }
+
 /**
 * JCORE DEFINES
 * this is where we define the API
 * first we set the basic file path settings
 */
-define ("JCORE_BASE_DIR", 		"/var/www/JCORE".$ENVPATH."/CORE/");
-define ("JCORE_CONFIG_DIR", 	"/var/www/JCORE".$ENVPATH."/CONFIG/"); 
-define ("JCORE_CACHE_DIR", 		"/var/www/JCORE".$ENVPATH."/CACHE/");
-define ("JCORE_TMP_DIR", 		"/var/www/JCORE".$ENVPATH."/CACHE/FILE/");
-define ("JCORE_TEMPLATES_DIR", 	"/var/www/JCORE".$ENVPATH."/TEMPLATES/");
+define ("JCORE_BASE_DIR", 		$ENVPATH."/CORE/");
+define ("JCORE_CONFIG_DIR", 	$ENVPATH."/CONFIG/"); 
+
+define ("JCORE_CACHE_DIR", 		$CACHEPATH."/CACHE/");
+define ("JCORE_TMP_DIR", 		$CACHEPATH."/CACHE/FILE/");
+define ("JCORE_FILE_CACHE_DIR", $CACHEPATH."/CACHE/FILE/"); //make sure you have write access
+define ("JCORE_TEMPLATES_DIR", 	$CACHEPATH."/TEMPLATES/");
 /**
 * supporting services 
 */
-define ("JCORE_LOG_DIR", "/var/log/httpd/"); //make sure you have write access
-define ("JCORE_FILE_CACHE_DIR", "/var/www/JCORE".$ENVPATH."/CACHE/FILE/"); //make sure you have write access
+define ("JCORE_LOG_DIR", $LOGPATH); //make sure you have write access
 
-define ("JCORE_PLUGINS_DIR", "/var/www/JCORE".$ENVPATH."/PLUGINS/AUTHSERVER/PLUGINS/");
-define ("JCORE_PACKAGES_DIR", "/var/www/JCORE".$ENVPATH."/PACKAGES/");
+define ("JCORE_PLUGINS_DIR", $PLUGINSPATH."/PLUGINS/AUTHSERVER/PLUGINS/");
+define ("JCORE_PACKAGES_DIR", $PACKAGESPATH."/PACKAGES/");
 /**
 *  JCORE REQUIRED API SETTINGS
 * next we define this API
 * <pre>
-* ---ingonore this section for now, a session object will be writen using a cache backend-------
+* ---ingonore this section for now, a session object will be written using a cache backend-------
 * -------------------------------------------------------------------------------------
 * JCORE_SESSION_NAME is the common name for the API + the PID of the thread
 * catch that? yes the application does use local sessions but they are NOT
@@ -65,6 +72,7 @@ define ("JCORE_SESSION_NAME", $JCORE_SESSION_NAME); //a-z, A-Z, 0-9 and '-,'
 * 
 * that can be invoked from a static handler class
 */
+#define ("JCORE_SYSTEM_CACHE", "APC");
 #define ("JCORE_SYSTEM_CACHE", "EACCELERATOR");
 define ("JCORE_SYSTEM_CACHE", "XCACHE");
 define ("JCORE_SYSTEM_CACHE_SERIALIZATION", "JSON"); //JSON/NATIVE/RAW[string]
@@ -73,7 +81,7 @@ define ("JCORE_SYSTEM_CACHE_SERIALIZATION", "JSON"); //JSON/NATIVE/RAW[string]
 /**
 * basic settings for the API
 */
-define ("JCORE_API_DIR", "/var/www/VHOSTS/auth".strtolower($ENVPATH).".deluxebusinessservices.com/AJAX");
+define ("JCORE_API_DIR", __DIR__);
 #define ("JCORE_API_TRANSPORT_IN", "URI"); //	ARG/URI/JSONPRC/XML/SOAP
 #define ("JCORE_API_TRANSPORT_OUT", "HTML");
 define ("JCORE_API_TRANSPORT_IN", "JSON"); //	ARG[_ver]/URI/JSONPRC_1_0/XML/SOAP
@@ -102,7 +110,7 @@ $BOOTSTRAP["UNSERIALIZE_TYPE"] = 'ARRAY'; //[ARRAY/OBJECT]
 #echo __FILE__.'@'.__LINE__.'<br>';
 #phpinfo();
 #die;
-#echo __FILE__.'@'.__LINE__.'BOOTSTRAP =='.JCORE_BASE_DIR.'LOAD/BOOTSTRAP.php'.'<br>';
+echo __FILE__.'@'.__LINE__.'BOOTSTRAP =='.JCORE_BASE_DIR.'LOAD/BOOTSTRAP.php'.'<br>';
 require_once(JCORE_BASE_DIR.'/LOAD/BOOTSTRAP.php');
 
 
@@ -120,7 +128,7 @@ $pluginList = array(
 foreach($pluginList AS $key => $pluginName){
 	$CONFIG_MANAGER->registerPlugin($pluginName); //getRegisteredPlugins($pluginName=null)
 }
-#echo __FILE__.'@'.__LINE__.'<br>';
+echo __FILE__.'@'.__LINE__.'<br>';
 
 #require_once(JCORE_BASE_DIR.'LOAD/AUTOLOAD_PLUGIN.php');
 require_once(JCORE_BASE_DIR.'LOAD/AUTOLOAD.php');
