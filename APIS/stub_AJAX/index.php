@@ -90,10 +90,17 @@ echo __FILE__.'@'.__LINE__.'fileList<pre>'.var_export($fileList, true).'</pre><b
 
 $error =  array();
 $error['Code'] = 32700;
+$error['Code'] = 32001;
 $error['Message'] = 'some shit';
-$error['Data'] = 'put data here, test flag for back trace';
+#$error['Data'] = 'put data here, test flag for back trace';
+$error['Data'] = null;
+echo __FILE__.'@'.__LINE__.'<br>';
 $ERROR = new JCORE\EXCEPTION\ERROR($error);
-echo __FILE__.'@'.__LINE__.'$ERROR<pre>'.var_export($ERROR, true).'</pre><br>';
 echo __FILE__.'@'.__LINE__.'$ERROR<pre>'.var_export($ERROR->getError($AsJSON = true), true).'</pre><br>';
+if( is_array($ERROR->getError($AsJSON = false)) ){
+	echo 'is_array';
+	
+}
+echo __FILE__.'@'.__LINE__.'$ERROR<pre>'.var_export($ERROR, true).'</pre><br>';
 
 ?>

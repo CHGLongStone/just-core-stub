@@ -2,6 +2,7 @@
 if (file_exists('vendor/autoload.php')) {
 	#echo __FILE__.'@@@@@@@@'.__LINE__.'<br>';
     $loader = include 'vendor/autoload.php';
+	echo __FILE__.'@'.__LINE__.'loader<pre>'.var_export($loader, true).'</pre><br>';
 	
 	
 	
