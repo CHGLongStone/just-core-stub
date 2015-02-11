@@ -20,21 +20,25 @@ if (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] != 'produc
 * settings in this config file are specific to the files loaded in this directory
 */
 
-echo __FILE__.'@'.__LINE__.'<br>';
+#echo __FILE__.'@'.__LINE__.'<br>';
 #require_once('config.php');
 $pluginList = array(
 	'AJAX_STUB',
 	'THEMEMANAGER'
 	
 );
+/**
 echo __FILE__.'@'.__LINE__.'dirname<pre>'.var_export(dirname(__DIR__), true).'</pre><br>';
 echo __FILE__.'@'.__LINE__.'dirname->dirname<pre>'.var_export(dirname(dirname(__DIR__)), true).'</pre><br>';
 
 echo __FILE__.'@'.__LINE__.'__DIR__::'.__DIR__.'<br>';
 echo __FILE__.'@'.__LINE__.'getcwd()::'.getcwd().'<br>';
+*/
 chdir(dirname(dirname(__DIR__)));
+/**
 echo __FILE__.'@'.__LINE__.'__DIR__::'.__DIR__.'<br>';
 echo __FILE__.'@'.__LINE__.'getcwd()::'.getcwd().'<br>';
+*/
 
 
 if (file_exists('init.php')) {
@@ -61,11 +65,11 @@ echo __FILE__.'@'.__LINE__.'<br>';
 
 #echo __FILE__.'@'.__LINE__.'AJAXObj<pre>'.var_export($AJAXObj, true).'</pre><br>';
 
+/*
 echo __FILE__.'@'.__LINE__.'$_SERVER["QUERY_STRING"]<pre>'.print_r($_SERVER["QUERY_STRING"], true).'</pre><br>';
 echo __FILE__.'@'.__LINE__.'<br>';
 echo __FILE__.'@'.__LINE__.'<br>';
 
-/*
 echo __FILE__.'@'.__LINE__.'__DIR__::'.__DIR__.'<br>';
 echo __FILE__.'@'.__LINE__.'dirname(__DIR__)::'.dirname(__DIR__).'<br>';
 echo __FILE__.'@'.__LINE__.'dirname(dirname(__DIR__))::'.dirname(dirname(__DIR__)).'<br>';
@@ -87,7 +91,8 @@ $fileList = glob($pattern,GLOB_BRACE);
 echo __FILE__.'@'.__LINE__.'fileList<pre>'.var_export($fileList, true).'</pre><br>';
 */
 
-
+/*****
+* test error object
 $error =  array();
 $error['Code'] = 32700;
 $error['Code'] = 32001;
@@ -102,5 +107,21 @@ if( is_array($ERROR->getError($AsJSON = false)) ){
 	
 }
 echo __FILE__.'@'.__LINE__.'$ERROR<pre>'.var_export($ERROR, true).'</pre><br>';
+*/
 
+
+/* 
+* test DB object
+*/
+
+$config = array(
+	"DSN" => "HVS",
+	"database" => "hvs_dev",
+	"table" => "hvs_users",
+	"pk_field" => "id",
+	"pk" => 305,
+);
+$DAO = new JCORE\DAO\DAO($config);
+
+echo __FILE__.'@'.__LINE__.'$DAO<pre>'.var_export($DAO, true).'</pre><br>';
 ?>
