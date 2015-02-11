@@ -4,12 +4,15 @@
  * 
  * 
  * @author		Jason Medland
- * @package		EXAMPLE
- * @subpackage	BASIC
- */
-/**
-* @package		EXAMPLE
+* @package		JCORE\PLUGIN\EXAMPLE
 * @subpackage	BASIC
+ */
+namespace JCORE\PLUGIN\EXAMPLE;
+
+/**
+ * Class basicAPI
+ *
+ * @package JCORE\PLUGIN\EXAMPLE
 */
 class basicAPI{
 	

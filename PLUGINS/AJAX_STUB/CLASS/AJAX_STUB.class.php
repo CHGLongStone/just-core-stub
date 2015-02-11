@@ -1,20 +1,23 @@
 <?
 /**
- * REST_API
+ * AJAX_STUB is a stub for creating an AJAX service
+ * A description of the object should be included here for the service introspection 
+ * provided by SOA_BASE
+ * service introspection is designed to produce something similar to a WSDL in SOAP
+ * 
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	PLUGINS 
+ * @package	PLUGINS\AJAX_STUB\AJAX_STUB
+ * @subpackage	PLUGINS\AJAX_STUB\AJAX_STUB 
  */
+
+namespace PLUGINS\AJAX_STUB\AJAX_STUB;
+use JCORE\LOAD\TRANSPORT\SOA\SOA_BASE as SOA_BASE;
 /**
-* AJAX_STUB is a stub class for creating an AJAX service
-* A description of the class should be included here for the service introspection 
-* provided by SOA_BASE
-* service introspection is designed to produce something similar to a WSDL in SOAP
-* 
+ * Class AJAX_STUB
+ *
+ * @package PLUGINS\AJAX_STUB\AJAX_STUB
 */
-
-class AJAX_STUB extends SOA_BASE{ //extends JSONRPC_1_0_API
-
+class AJAX_STUB extends SOA_BASE{ 
 	/** 
 	* 
 	*/
