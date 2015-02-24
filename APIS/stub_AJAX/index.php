@@ -106,22 +106,37 @@ if( is_array($ERROR->getError($AsJSON = false)) ){
 	echo 'is_array';
 	
 }
-echo __FILE__.'@'.__LINE__.'$ERROR<pre>'.var_export($ERROR, true).'</pre><br>';
 */
 
 
 /* 
 * test DB object
+echo __FILE__.'@'.__LINE__.'$GLOBALS["DATA_API"]<pre>'.var_export($GLOBALS["DATA_API"], true).'</pre><br>';
 */
+$DSN = 'HVS';
+$tableName = 'order';
+$query = 'SELECT * FROM hvs_users;';
+$result = $GLOBALS["DATA_API"]->retrieve($DSN, $query, $args=array('returnArray' => true));
+#echo __FILE__.'@'.__LINE__.'$result<pre>'.var_export($result, true).'</pre><br>';
+#echo __FILE__.'@'.__LINE__.'$GLOBALS["DATA_API"]<pre>'.var_export($GLOBALS["DATA_API"], true).'</pre><br>';
+$tableDef = $GLOBALS["DATA_API"]->introspectTable($DSN, $tableName);
+#echo __FILE__.'@'.__LINE__.'$tableDef<pre>'.var_export($tableDef, true).'</pre><br>';
 
 $config = array(
 	"DSN" => "HVS",
 	"database" => "hvs_dev",
-	"table" => "hvs_users",
-	"pk_field" => "id",
-	"pk" => 305,
+	"table" => "order",
+	#"pk_field" => "id",
+	#"pk" => 305,
 );
+
+exit;
+echo __FILE__.'@'.__LINE__.'$config<pre>'.var_export($config, true).'</pre><br>';
 $DAO = new JCORE\DAO\DAO($config);
 
+$DAO->initialize($config["DSN"], $config["table"]);
 echo __FILE__.'@'.__LINE__.'$DAO<pre>'.var_export($DAO, true).'</pre><br>';
+
+
+
 ?>

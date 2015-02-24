@@ -31,7 +31,7 @@ if (file_exists('vendor/autoload.php')) {
 	$GLOBALS["CONFIG_MANAGER"]->loadConfig($LOAD_ID, $FILE_NAME);
 	*/
 	
-	#echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting(), true).'</pre><br>';
+	echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting(), true).'</pre><br>';
 	$GLOBALS['LOG_ERROR'] = new JCORE\LOG\LOGGER(
 		$GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'JCORE_LOG', $SECTION_NAME = 'JCORE')
 	);
