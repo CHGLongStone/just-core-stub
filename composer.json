@@ -13,8 +13,7 @@
 	},
 	"autoload" : {
 		"classmap" : [
-			"PACKAGES",
-			"PLUGINS"
+			"SERVICES"
 		]
 	}
 }

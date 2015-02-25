@@ -47,6 +47,9 @@ if (file_exists('vendor/autoload.php')) {
 	
 	$getCSN = $GLOBALS["CONFIG_MANAGER"]->getSetting('CACHE','JCORE_SYSTEM_CACHE');
 	$GLOBALS["CONFIG_MANAGER"]->setCache($getCSN);
+	#echo __FILE__.'@'.__LINE__.'$GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"], true).'</pre><br>';
+	
+	
 	#$GLOBALS['DATA_API'] = new JCORE\CACHE\($getDSN);
 	$getDSN = $GLOBALS["CONFIG_MANAGER"]->getSetting('DSN');
 	#echo __FILE__.'@'.__LINE__.'DSN<pre>'.var_export($getDSN, true).'</pre><br>';
