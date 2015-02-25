@@ -4,6 +4,15 @@ return array(
     'ERROR' => array(
 		'0' => 'Undefined Error',
 		'1' => 'test error',
+		// JCORE
+		'100' => 'AUTH ERROR',
+		'110' => 'CACHE ERROR',
+		'120' => 'DAO ERROR',
+		'130' => 'DATA ERROR',
+		'140' => 'LOG ERROR',
+		'150' => 'LOAD ERROR',
+		'160' => 'TRANSPORT ERROR',
+		
 		// User
 		'1000' => 'User does not exist',
 		//Application

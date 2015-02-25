@@ -34,7 +34,8 @@ echo __FILE__.'@'.__LINE__.'dirname->dirname<pre>'.var_export(dirname(dirname(__
 echo __FILE__.'@'.__LINE__.'__DIR__::'.__DIR__.'<br>';
 echo __FILE__.'@'.__LINE__.'getcwd()::'.getcwd().'<br>';
 */
-chdir(dirname(dirname(__DIR__)));
+$APPLICATION_ROOT = dirname(dirname(__DIR__));
+chdir($APPLICATION_ROOT);
 /**
 echo __FILE__.'@'.__LINE__.'__DIR__::'.__DIR__.'<br>';
 echo __FILE__.'@'.__LINE__.'getcwd()::'.getcwd().'<br>';

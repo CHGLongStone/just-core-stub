@@ -14,7 +14,7 @@ if (file_exists('vendor/autoload.php')) {
 		* if you do not have an opcode cache installed
 		*
 		*/
-		#$BOOTSTRAP["CSN"] = JCORE_SYSTEM_CACHE;		
+		$BOOTSTRAP["CSN"] = "JCORE_SYSTEM_CACHE";		
 		$BOOTSTRAP["CACHE_SERIALIZATION"] = 'JSON'; //
 		$BOOTSTRAP["UNSERIALIZE_TYPE"] = 'ARRAY'; //CACHE_SERIALIZATION-JSON[OBJECT/ARRAY] for json_decode
 	}
@@ -22,16 +22,16 @@ if (file_exists('vendor/autoload.php')) {
 	#echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"], true).'</pre><br>';
 	$GLOBALS["CONFIG_MANAGER"]->loadConfig();
 	
-	#echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting(), true).'</pre><br>';
 	
 	/*
+	echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting(), true).'</pre><br>';
 	$LOAD_ID='EXT'; 
 	$FILE_NAME='/home/jason/HVS/HVS_APPLICATION/CONFIG/AUTOLOAD';
 	
 	$GLOBALS["CONFIG_MANAGER"]->loadConfig($LOAD_ID, $FILE_NAME);
+	echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting('CACHE'), true).'</pre><br>';
 	*/
 	
-	echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting(), true).'</pre><br>';
 	$GLOBALS['LOG_ERROR'] = new JCORE\LOG\LOGGER(
 		$GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'JCORE_LOG', $SECTION_NAME = 'JCORE')
 	);
@@ -44,8 +44,13 @@ if (file_exists('vendor/autoload.php')) {
 
 	$CACHECFG = $GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'CACHE_SOURCE'); //, $SECTION_NAME = 'FOUNDATION'
 	
+	
+	$getCSN = $GLOBALS["CONFIG_MANAGER"]->getSetting('CACHE','JCORE_SYSTEM_CACHE');
+	$GLOBALS["CONFIG_MANAGER"]->setCache($getCSN);
+	#$GLOBALS['DATA_API'] = new JCORE\CACHE\($getDSN);
 	$getDSN = $GLOBALS["CONFIG_MANAGER"]->getSetting('DSN');
 	#echo __FILE__.'@'.__LINE__.'DSN<pre>'.var_export($getDSN, true).'</pre><br>';
+	#echo __FILE__.'@'.__LINE__.'GLOBALS["CONFIG_MANAGER"]<pre>'.var_export($GLOBALS["CONFIG_MANAGER"]->getSetting(), true).'</pre><br>';
 	$GLOBALS['DATA_API'] = new JCORE\DATA\API\DATA_API($getDSN);
 	#echo __FILE__.'@'.__LINE__.'$GLOBALS["DATA_API"]<pre>'.var_export($GLOBALS["DATA_API"], true).'</pre><br>';
 	
