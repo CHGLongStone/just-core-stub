@@ -188,7 +188,7 @@ $DAO2->initialize($config["DSN"], $config["table"]);
 
 
 $field = 'client_id'; 
-#$value = 1;
+$value = 1;
 $DAO2->set($config["table"], $field, $value);
 
 $field = 'address'; 
@@ -213,21 +213,28 @@ $field = 'country';
 $value = 'CA';
 $DAO2->set($config["table"], $field, $value);
 #JCORE DATE FORMAT_TIMESTAMP
-exit;
+
 $DATE_FORMATS =  $GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'JCORE', $SECTION_NAME = 'DATE');
 
 $timestamp = date($DATE_FORMATS["FORMAT_TIMESTAMP"]);
 
 echo __FILE__.'@'.__LINE__.'$timestamp<pre>'.var_export($timestamp, true).'</pre><br>';
 
-
 $field = 'created'; 
-$value = '12345';
+$value = $timestamp;
 $DAO2->set($config["table"], $field, $value);
 
+$field = 'updated'; 
+$value = $timestamp;
+$DAO2->set($config["table"], $field, $value);
+
+echo __FILE__.'@'.__LINE__.'$DAO2<pre>'.var_export($DAO2, true).'</pre><br>';
 
 
-
+/*
+--> { "method": "echo", "params": ["Hello JSON-RPC"], "id": 1}
+<-- { "result": "Hello JSON-RPC", "error": null, "id": 1}
+*/
 
 
 
