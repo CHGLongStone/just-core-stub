@@ -1,4 +1,4 @@
-<?
+<?php
 if(!include('../env.php') ){
 	$ENVPATH = '';
 }
@@ -11,12 +11,12 @@ if(!include('../env.php') ){
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<!-- <link rel="canonical" href="http://deluxebusinessservices.com/" /> -->
-	<script type='text/javascript' src='https://auth<? echo strtolower($ENVPATH);?>.deluxebusinessservices.com/assets/scripts/prototype.js'></script>
+	<script type='text/javascript' src='https://auth<?php echo strtolower($ENVPATH);?>.deluxebusinessservices.com/assets/scripts/prototype.js'></script>
 	<script type='text/javascript' >
 //-----------------------------------------
 //-----------------------------------------
 //-----------------------------------------
-ENVPATH="<? echo strtolower($ENVPATH);?>";
+ENVPATH="<?php echo strtolower($ENVPATH);?>";
 SERVICE_PAGE = 'https://auth'+ENVPATH+'.deluxebusinessservices.com/AJAX'; //'RPC_PROXY.php'+URIString
 URIString = '';
 function randomizeRequestID(){
@@ -346,7 +346,7 @@ SETTINGS: <a href="javascript:void(0);" onclick="pageSingle('testOptions')">[+]<
 
 <div id="traceStatus">
 </div>
-<?
+<?php
 #echo '<pre>'.print_r($GLOBALS, true).'</pre>';
 $jsonstring = " {	{ 'domain':'domain1.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain2.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain3.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain4.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain5.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain6.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain7.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain8.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain9.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain10.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain11.com','cID':'DE12345','pID':'DE03333' }};";
 $jsonstring = " [	{ 'domain':'domain1.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain2.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain3.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain4.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain5.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain6.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain7.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain8.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain9.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain10.com','cID':'DE12345','pID':'DE03333' },	{ 'domain':'domain11.com','cID':'DE12345','pID':'DE03333' }];";

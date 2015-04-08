@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * CONFIG_MANAGER (JCORE) CLASS
  * this is a Modified Preorder Tree Traversal based on the example given here:

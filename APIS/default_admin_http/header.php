@@ -1,4 +1,4 @@
-<? 
+<?php 
 /**
 OUTLINE
 this is the default layout for a standard API, in this case a regular website
