@@ -1,59 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <TITLE>test</TITLE>
+ <!-- 
+ <link rel="stylesheet" href="../webix/codebase/webix.css" type="text/css"> 
+ <script type="text/javascript" src="../webix/codebase/webix.js"></script>
+ -->
+ <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css"> 
+ <script type="text/javascript" src="http://cdn.webix.com/edge/webix.js"></script>
+ 
+ <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+ <script type="text/javascript" >
+	var API_PATH = 'http://soa.cs1052.mojohost.com/';
+	
+	function doAjaxRequest2( ) {
+		objData = $("#jsonString").val();
+		objData = jQuery.parseJSON(objData);
+		requestURL = $("#requestURL").val();
+		requestType = $("#requestType").val();
+		 
+		$.ajax({
+		  type: requestType,
+		  dataType: "json",
+		  url: API_PATH,
+		  data: objData,
+		  cache: false
+			})
+		  .done(function( resultObj ) {
+			//alert("doAjaxRequest2: "+resultObj.result.title);
+			
+			$( "#results" ).append( JSON.stringify(resultObj, null, 2)+"\r\n\r\n" );
+		  });
+	}
+
+  function prettyPrint()
+  {
+   objData = $("#jsonString").val();
+   objData = jQuery.parseJSON(objData);
+   objJSON = JSON.stringify(objData, null, 2);
+   $("#jsonString").html(objJSON);
+  }
+	function pageSingle(id){
+		//alert(id);
+		if (document.getElementById(id)){
+				//alert('document.getElementById(id).style.display='+document.getElementById(id).style.display);
+			(document.getElementById(id).style.display == 'none')? display = 'block': display = 'none' ;
+			//alert('display'+display);
+			document.getElementById(id).style.display = display;
+			//alert('document.getElementById(page_id).style.display: '+document.getElementById(page_id).style.display);
+		}
+	}
+ </script>
+ <style>
+  body { 
+   font-size:14px; 
+   line-height:1.3em;
+   background-color:rgba(0,0,0,0.2);
+   
+  }
+  .description { 
+   font-size:14px;
+  }
+  .code { 
+   font-size:10px;
+  }
+  .sectionHead { 
+   font-weight:bold;
+  }
+  
+ </style>
+</head>
+<body>
+
 <?php
-/**
- * update
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	API_STUB_AJAX
- */
-
-#
-#
-#echo __FILE__.'@'.__LINE__.'_REQUEST<pre>'.var_export($_REQUEST, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_POST<pre>'.var_export($_POST, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_GET<pre>'.var_export($_GET, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_GET<pre>'.print_r($GLOBALS, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'$_SERVER["QUERY_STRING"]<pre>'.print_r($_SERVER["QUERY_STRING"], true).'</pre><br>';
+$DSN = 'JCORE';
+$table = 'jcore_example';
+$pk_field = 'id';
 
 
-/**
-* config.php is specific for the API, can/should be shared with loadable files in ths directory
-* JCORE specific settings are in the JCORE/CORE/CONFIG dir in ini files
-* settings in this config file are specific to the files loaded in this directory
-*/
-
-require_once('config.php');
-#echo __FILE__.'@'.__LINE__.'<br>';
-/*
-* load the transport layer
-*/
-#$filepath = JCORE_BASE_DIR.'TRANSPORT/JSON/JSONRPC_1_0_API.class.php';
-##echo '$filepath['.$filepath.']<br>';
-#require_once($filepath);
-
-
-
-
-#echo __FILE__.'@'.__LINE__.'<br>';
-
-#require_once(JCORE_PLUGINS_DIR'config.php');
-
-/*
-* load the  service layer
-https://auth-dev.deluxebusinessservices.com/AJAX/test.php?{%22method%22:%20%22AJAX_STUB.aServiceMethod%22,%20%22params%22:%20{%22resultHandler%22%20:%20%22returnOrderPK%22%20,%20%22action%22%20:%20%22setAction%22},%20%22id%22:%2067619818192968}
-https://auth-dev.deluxebusinessservices.com/AJAX/test.php?{"method": "AJAX_STUB.introspectService", "params": {"resultHandler" : "returnOrderPK" , "action" : "setAction"}, "id": 67619818192968}
-*/
-
-#$AJAXObj = new AJAX_STUB();
-#echo __FILE__.'@'.__LINE__.'<br>';
-$JSONRPC_1_0_API = new JSONRPC_1_0_API();
+$request = array(
+ "method" => "\SERVICE\CRUD\CRUD.update",
+ "params" => array(
+  "DSN" => $DSN,
+  "table" => $table ,
+  "pk_field" => $pk_field,
+  "pk" => 1,
+  "values" => array(
+    $pk_field => "1",
+    "short_name" => "vexus",
+    "long_name" => "Vexus Consulting Group"
+  ),
+ ),
+ "id" => "",
+);
 
 
-#echo __FILE__.'@'.__LINE__.'AJAXObj<pre>'.var_export($AJAXObj, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_REQUEST<pre>'.var_export($_REQUEST, true).'</pre><br>';
-#echo 'HELLO JOSH!!!';
-#echo __FILE__.'@'.__LINE__.'_REQUEST<pre>'.var_export($_REQUEST, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_POST<pre>'.var_export($_POST, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_GET<pre>'.var_export($_GET, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_GET<pre>'.print_r($GLOBALS, true).'</pre><br>';
-echo __FILE__.'@'.__LINE__.'$_SERVER["QUERY_STRING"]<pre>'.print_r($_SERVER["QUERY_STRING"], true).'</pre><br>';
+$request = array(
+ "method" => "\SERVICE\CRUD\CRUD.retrieve",
+ "params" => array(
+  "DSN" => $DSN,
+  "table" => $table,
+  "pk_field" => $pk_field,
+  "pk" => 1,
+ ),
+ "id" => "",
+);
+#echo __METHOD__.__LINE__.'<pre>'.var_export($request,true).'</pre>';
+$request = json_encode($request);
+#echo __METHOD__.__LINE__.'<pre>'.var_export($request,true).'</pre>';
+
 ?>
+<a href="javascript:void(0);" onclick="pageSingle('setup');">Setup</a>
+<div id="setup" style="display: none;">
+	The following *.local files need to be created from the example *global or *.php files in /CONFIG/AUTOLOAD/<br>
+	<br>
+	just-core.local.php<br>
+	data.local.php<br>
+	cache.local.php<br>
+	log.local.php<br>
+		
+	<br>
+	<br>
+	Create the following table in your data store to use the examples below<br>
+	<pre>
+	SET FOREIGN_KEY_CHECKS=0;
+	-- ----------------------------
+	-- Table structure for jcore_example
+	-- ----------------------------
+	CREATE TABLE `jcore_example` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `shortname` varchar(30) DEFAULT NULL,
+	  `longname` varchar(255) DEFAULT NULL,
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+	-- ----------------------------
+	-- Records 
+	-- ----------------------------
+	INSERT INTO jcore_example
+	  (id, shortname, longname)
+	VALUES
+	  (1, "a short name", "a longer name and description");
+	</pre>
+
+</div>
+<br>
+<span class="sectionHead">AJAX REQUEST:</span><br>
+<br>
+<span class="sectionHead">URL:</span> <input name="requestURL" id="requestURL"  type="text" value="./API/" ><br>
+<span class="sectionHead">REQUEST TYPE:</span> <input name="requestType" id="requestType"  type="text" value="POST" ><br>
+<input type="button" value="do request" onclick="doAjaxRequest2();">
+<input type="button" value="Pretty Print Request" onclick="prettyPrint();"><br>
+
+<textarea name="jsonString" id="jsonString" style="width:600px; height:150px;" ><?php echo $request; ?></textarea><br>
+<span class="sectionHead">RESULTS:</span>
+<input type="button" value="clear results" onclick="$(results).html('');"><br>
+<textarea name="results" id="results" style="width:600px; height:150px;" >
+</textarea>
+<br>
+<br>
+<br>
+
+<div class="description">
+
+Class is called by namespace, slashes must be escaped to preserve JSON formatting<br>
+
+"method" service class and method with a period separator <br>
+
+"params" are the arguments passed to the service method, no arguments passed to constructor<br>
+
+<span class="sectionHead">Data calls </span>
+DSN => Data Source Name, configuration is stored in [install root]/CONFIG/AUTOLOAD/data.local.php <br>
+see examples in [install root]/CONFIG/AUTOLOAD/data.php <br>
+3 Other required args for a retrieve operation  <br>
+<ul>
+ <li>"table" the table name</li>
+ <li>"pk_field" the primary key field name</li>
+ <li>"pk" the primary key of the row you want </li>
+</ul>
+<span class="sectionHead">RETRIEVE</span><br>
+<pre class="code">
+{
+    "method": "\\SERVICE\\CRUD\\CRUD.retrieve",
+    "params": {
+        "DSN": "<?php echo $DSN;?>",
+        "table": <?php echo $table;?>,
+        "pk_field": <?php echo $pk_field;?>,
+        "pk": 1
+    },
+    "id": ""
+}
+</pre>
+
+will return an array of records  <br>
+<pre class="code">
+{
+  "result": [
+    {
+      "id": "1",
+      "short_name": "vexus",
+      "long_name": "Vexus Consulting Group"
+    },
+    {
+      "id": "2",
+      "short_name": "vexus2",
+      "long_name": "Vexus2 Consulting Group"
+    }
+  ],
+  "error": null,
+  "id": "0.79750900 1424978023"
+}
+</pre>
+<span class="sectionHead">UPDATE</span><br>
+one other argument required for update operations  <br>
+"values" an array of the column names and values you want to update  <br>
+besides the primary key only the values being updated need to be supplied <br>
+the update is applied as a differential  <br>
+
+<pre class="code">
+{
+    "method": "\\SERVICE\\CRUD\\CRUD.update",
+    "params": {
+        "DSN": "<?php echo $DSN;?>",
+        "table": "<?php echo $table;?>",
+        "pk_field": "<?php echo $pk_field;?>",
+        "pk": 1,
+        "values": {
+            "id": "1",
+            "short_name": "vexus",
+            "long_name": "Vexus Consulting Group"
+        }
+    },
+    "id": ""
+}
+</pre>
+
+will return an array of of the result   <br>
+<pre class="code">
+{
+  "result": [
+    {
+      "AFFECTED_ROWS": 0,
+      "INFO": "Rows matched: 1  Changed: 0  Warnings: 0"
+    }
+  ],
+  "error": null,
+  "id": "0.39666500 1424985892"
+}
+</pre>
+
+
+</div>
+<?php
+
+/*
+
+$requestObj = 'method=%5CSERVICE%5CCRUD%5CCRUD.retrieve&params%5BDSN%5D=HVSPROD&params%5Btable%5D=branch&params%5Bpk_field%5D=omgwdf&params%5Bpk%5D=0&id=';
+echo '<pre>'.$requestObj.'</pre>';
+
+echo '<pre>'.urldecode($requestObj).'</pre>';
+*/
+
+
+
+?>
+<script type="text/javascript" >
+
+</script>
+</body>
