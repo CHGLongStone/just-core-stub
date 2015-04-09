@@ -9,11 +9,10 @@
 /**
  * Display all errors when APPLICATION_ENV is development.
  */
-    ini_set("display_errors", 1);
-    error_reporting(E_ALL);
-	echo __FILE__.'@'.__LINE__.'<br>';
 if (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] != 'production') {
-	echo __FILE__.'@'.__LINE__.'<br>';
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+	#echo __FILE__.'@'.__LINE__.'<br>';
 	
 }
 /**
@@ -22,6 +21,7 @@ if (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] != 'produc
 
 $APPLICATION_ROOT = dirname(dirname(__DIR__)).'/';
 chdir($APPLICATION_ROOT);
+
 
 
 /**
@@ -34,9 +34,7 @@ if (file_exists('init.php')) {
     include 'init.php';
 }
 
-	echo __FILE__.'@'.__LINE__.'<br>';
 
-exit;
 
 /**
 * throw the auth harness in here
