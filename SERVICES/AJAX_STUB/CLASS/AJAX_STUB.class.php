@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * AJAX_STUB is a stub for creating an AJAX service
  * A description of the object should be included here for the service introspection 

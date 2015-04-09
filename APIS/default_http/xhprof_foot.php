@@ -1,4 +1,4 @@
-<?
+<?php
 if (extension_loaded('xhprof')) {
     echo '<b>RUN</b>xhprof';
 	$profiler_namespace = 'myapp';  // namespace for your application

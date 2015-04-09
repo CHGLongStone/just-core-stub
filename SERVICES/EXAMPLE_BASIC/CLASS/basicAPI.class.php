@@ -1,4 +1,4 @@
-<? 
+<?php 
 /**
  * Basic example to show how plugins work
  * 

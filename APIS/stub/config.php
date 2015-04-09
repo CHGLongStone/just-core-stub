@@ -1,4 +1,4 @@
-<? 
+<?php 
 /**
  * update
  * @author	Jason Medland<jason.medland@gmail.com>
