@@ -11,7 +11,7 @@
  
  <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
  <script type="text/javascript" >
-	var API_PATH = 'http://soa.cs1052.mojohost.com/';
+	var API_PATH = 'http://just-core-stub.com';
 	
 	function doAjaxRequest2( ) {
 		objData = $("#jsonString").val();
@@ -112,6 +112,14 @@ $request = json_encode($request);
 ?>
 <a href="javascript:void(0);" onclick="pageSingle('setup');">Setup</a>
 <div id="setup" style="display: none;">
+	in the script section at the top of this file you will need to modify 
+	var API_PATH = 'http://just-core-stub.com';
+	to the FQDN where you have installed this stub or add the entry to your hosts file
+	with the correct IP
+	#=============================
+	127.0.0.1  just-core-stub.com
+	#=============================
+	
 	The following *.local files need to be created from the example *global or *.php files in /CONFIG/AUTOLOAD/<br>
 	<br>
 	just-core.local.php<br>
