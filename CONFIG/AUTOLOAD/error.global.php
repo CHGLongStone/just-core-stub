@@ -12,6 +12,7 @@ return array(
 		'140' => 'LOG ERROR',
 		'150' => 'LOAD ERROR',
 		'160' => 'TRANSPORT ERROR',
+		'170' => 'SERVICE ERROR',
 		
 		// User
 		'1000' => 'User does not exist',
