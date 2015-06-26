@@ -8,11 +8,18 @@
  
 /**
  * Display all errors when APPLICATION_ENV is development.
+ * set in .htaccess in this directory 
+ * 
  */
 if (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] != 'production') {
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
-	#echo __FILE__.'@'.__LINE__.'<br>';
+	/*
+	*/
+	echo __FILE__.'@'.__LINE__.' 
+		you need to read the notes above this line then comment it out<br>
+		test your installation <a href="test.php" >here:</a>
+	';
 	
 }
 /**

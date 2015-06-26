@@ -5,11 +5,9 @@
  * @package	JCORE
  * @subpackage	DEFAULT_API
  */
-/***
-*
-*/
 ini_set('error_reporting', E_STRICT);//E_STRICT	E_NOTICE	E_WARNING
 ini_set('display_errors', "1");
+/****
 ini_set('xdebug.trace_options', 0); //overwrite
 ini_set('xdebug.scream', 1);	//disable the @ 
 ini_set('xdebug.show_local_vars', 1);
@@ -23,6 +21,7 @@ ini_set('xdebug.show_exception_trace', 1);
 ini_set('xdebug.trace_output_dir', "/var/log/httpd/");
 ini_set('xdebug.profiler_output_name', "%p-%s-%R");
 ini_set('xdebug.profiler_enable_trigger', 1);
+*/
 #phpinfo();
 #----include_once('xhprof_head.php');
 #xdebug_start_trace();
