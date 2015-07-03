@@ -21,3 +21,4 @@ php composer.phar install
 php composer.phar update
 
 php composer.phar dump-autoload --optimize 
+
