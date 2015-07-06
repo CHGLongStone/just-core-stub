@@ -30,7 +30,7 @@ class EXAMPLE_BASIC{
 	
 	public function __construct(&$templater){
 		#echo __METHOD__.'@'.__LINE__.'<br>';
-		#$e = new Exception();
+		#$e = new \Exception();
 		#echo '$e<pre>'.var_export($e->getMessage(),true).'</pre>';
 		$this->templater = $templater;
 		#echo '<pre>'.var_export($this->templater,true).'</pre>';
