@@ -39,7 +39,14 @@ chdir($APPLICATION_ROOT);
 */
 if (file_exists('init.php')) {
     include 'init.php';
+}else{
+	die('
+	application not initialized, your relative path<br>'.PHP_EOL.' 
+	from your API to your base install has not been calculated correctly<br>'.PHP_EOL.'
+	in the APPLICATION_ROOT variable
+	');
 }
+
 
 
 

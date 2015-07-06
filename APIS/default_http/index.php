@@ -5,9 +5,10 @@
  * @package	JCORE
  * @subpackage	DEFAULT_API
  */
+/***
+*
 ini_set('error_reporting', E_STRICT);//E_STRICT	E_NOTICE	E_WARNING
 ini_set('display_errors', "1");
-/****
 ini_set('xdebug.trace_options', 0); //overwrite
 ini_set('xdebug.scream', 1);	//disable the @ 
 ini_set('xdebug.show_local_vars', 1);
