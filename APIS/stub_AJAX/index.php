@@ -59,7 +59,7 @@ if (file_exists('init.php')) {
  /**
 * set headers
  */
-header("Access-Control-Allow-Origin: *.teamleads.com");
+header("Access-Control-Allow-Origin: *.".$_SERVER["HTTP_HOST"]);
 $file = '/var/log/httpd/ajax.log';
 $raw_data = file_get_contents('php://input');
 if("%5C" == substr($raw_data, 0,2) ){
