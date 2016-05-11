@@ -4,14 +4,20 @@
 	"license" : "GNU",
 	"keywords" : [
 		"Stub",
-		"just-core"
+		"just-core",
+		"Service Oriented Architechture",
+		"Enterprise",
+		"HA",
+		"High Availability",
+		"Framework",
+		"Authentication"
+	],
 	],
 	"version" : "1.0.0",
 	"require" : {
 		"php" : ">=5.3.3",
 		"just-core/foundation" : "0.5.*",
-		"just-core/foundation" : "dev-master",
-		"hautelook/phpass" : "dev-master"
+		"just-core/foundation" : "dev-master"
 	},
 	"autoload" : {
 		"classmap" : [
