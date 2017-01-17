@@ -1,0 +1,104 @@
+<?php
+/**
+ * Connection Classes can be created for any CACHE supported by PHP
+ * create wrappers for existing API's with this interface
+ * see http://us2.php.net/manual/en/function.session-set-save-handler.php
+ * 
+ * @author		Jason Medland
+ * @package		JCORE
+ * @subpackage	CACHE
+ *
+ *
+ *
+ */
+namespace JCORE\CACHE;
+use JCORE\CACHE\PHP_SESSION as PHP_SESSION;
+/**
+ * Interface SESSION
+ *
+ * @package JCORE\CACHE
+*/
+class SESSION implements PHP_SESSION{
+	/**
+	* __construct
+	* @access public
+	* @param null
+	* @return NULL  
+	*/
+	public function __construct(){
+	}
+	/**
+	* open
+	* 
+	* 
+	* @access public
+	* @param string savePath 
+	* @param mixed sessioneName 
+	* @return bool 
+	*/
+	public function open($savePath, $sessioneName){
+		return false;
+	} 
+	/**
+	* close
+	* 
+	* 
+	* @access public
+	* @param null
+	* @return bool 
+	*/
+	public function close(){
+		return false;
+	}
+	/**
+	* read
+	* must return string value 
+	* 
+	* @access public
+	* @param string key 
+	* @param mixed data 
+	* @return bool 
+	*/
+	public function read($key, $data){
+		
+		return false;
+	}
+	/**
+	* identifier and the data associated with it.
+	* write
+	* 
+	* @access public
+	* @param string key 
+	* @param mixed data 
+	* @return bool 
+	*/
+	public function write($key, $data){
+		return false;
+	}
+	/**
+	* destroy
+	* 
+	* @access public
+	* @param NULL
+	* @return bool 
+	*/
+	public function destroy(){
+	
+		return false;
+	}
+	/**
+	*
+	* max session lifetime as its only parameter.
+	* 
+	* 
+	* @access public
+	* @param int ttl 
+	* @return bool 
+	*/
+	public function gc($ttl){
+		return false;
+	}
+
+}
+
+?>

@@ -1,0 +1,72 @@
+<?php
+/**
+ * Connection Classes can be created for any CACHE supported by PHP
+ * create wrappers for existing API's with this interface
+ * 
+ * @author		Jason Medland
+ * @package		JCORE
+ * @subpackage	CACHE
+ */
+namespace JCORE\CACHE;
+
+/**
+ * Interface PHP_SESSION
+ *
+ * @package JCORE\CACHE
+*/
+interface PHP_SESSION{
+	/**
+	* DESCRIPTOR: open
+	* 
+	* @access public
+	* @param string savePath 
+	* @param string sessionID 
+	* @return  NULL  
+	*/
+	public function open($savePath, $sessionID);
+	/**
+	* DESCRIPTOR: close
+	* 
+	* @access public
+	* @param NULL 
+	* @return NULL  
+	*/
+	public function close();
+	/**
+	* DESCRIPTOR: read
+	* 
+	* @access public
+	* @param string key 
+	* @param mixed data 
+	* @return return NULL  
+	*/
+	public function read($key, $data);
+	/**
+	* DESCRIPTOR: write
+	* 
+	* @access public
+	* @param string key 
+	* @param mixed data 
+	* @return return NULL  
+	*/
+	public function write($key, $data);
+	/**
+	* DESCRIPTOR: destroy
+	* 
+	* @access public
+	* @param null 
+	* @return NULL  
+	*/
+	public function destroy();
+	/**
+	* DESCRIPTOR: gc
+	* 
+	* @access public
+	* @param int ttl 
+	* @return NULL  
+	*/
+	public function gc($ttl);
+
+}
+
+?>
