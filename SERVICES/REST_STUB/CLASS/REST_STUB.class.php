@@ -6,12 +6,12 @@
  * @subpackage	PLUGINS\REST_STUB\REST_STUB 
  */
 
-namespace PLUGINS\REST_STUB\REST_STUB;
+namespace PLUGINS\REST;
 use JCORE\TRANSPORT\REST\REST_API as REST_API;
 /**
  * Class REST_STUB
  *
- * @package PLUGINS\REST_STUB\REST_STUB
+ * @package PLUGINS\REST
 */
 class REST_STUB extends REST_API{
 

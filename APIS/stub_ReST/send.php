@@ -4,7 +4,7 @@
 
 class restrequest{
 	
-	public $requestURL = 'http://auth-dev.deluxebusinessservices.com/REST/';
+	public $requestURL = 'http://auth-dev.somcompany.com/REST/';
 	protected $extensions  = array(
 		'.js'   => 'Content-type: text/javascript',
 		'.json' =>  'Content-type: application/json',

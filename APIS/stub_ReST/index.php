@@ -3,62 +3,70 @@
  * update
  * @author	Jason Medland<jason.medland@gmail.com>
  * @package	JCORE
- * @subpackage	API_STUB
+ * 
  */
 
-$profiler_output_name = '-'.$_SERVER["PHP_SELF"].'-%s';
-ini_set('error_reporting', E_WARNING);//E_STRICT	E_NOTICE	E_WARNING 	E_ALL
-ini_set('display_errors', "On");//display_errors = Off
-ini_set('xdebug.trace_options', 0); //overwrite
-ini_set('xdebug.auto_trace', 1); 
-ini_set('xdebug.scream', 1);	//disable the @ 
-ini_set('xdebug.show_local_vars', 1);
-ini_set('xdebug.dump_globals', 1);
-ini_set('xdebug.collect_assignments', 1);
-ini_set('xdebug.collect_includes', 1);
-ini_set('xdebug.collect_params', 2);
-ini_set('xdebug.collect_return', 2);
-ini_set('xdebug.show_mem_delta', 0);
-ini_set('xdebug.show_exception_trace', 1);
-ini_set('xdebug.trace_output_dir', "/var/log/httpd/");
-ini_set('xdebug.profiler_output_name', $profiler_output_name); 
-ini_set('xdebug.profiler_enable_trigger', 1);
-#
-echo __FILE__.'@'.__LINE__.'_REQUEST<pre>'.var_export($_REQUEST, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_POST<pre>'.var_export($_POST, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_GET<pre>'.var_export($_GET, true).'</pre><br>';
-#echo __FILE__.'@'.__LINE__.'_GET<pre>'.print_r($GLOBALS, true).'</pre><br>';
 
-/**
-* config.php is specific for the API, can/should be shared with loadable files in ths directory
-* JCORE specific settings are in the JCORE/CORE/CONFIG dir in ini files
-* settings in this config file are specific to the files loaded in this directory
+
+
+
+ 
+ /**
+* set headers
+ */
+header("Access-Control-Allow-Origin: *.".$_SERVER["HTTP_HOST"]);
+$file = '/var/log/httpd/'.$_SERVER["HOST_NAME"].'.rest.log';
+
+/*
+* dump it all if you really need to see it...
+#echo __FILE__.'@'.__LINE__.'$_POST['.var_dump($_POST,true).']'.PHP_EOL;
+echo __FILE__.'@'.__LINE__.'$_GET<pre>['.var_dump($_GET,true).']</pre>'.PHP_EOL;
+echo __FILE__.'@'.__LINE__.'$_REQUEST<pre>['.var_dump($_REQUEST,true).']</pre>'.PHP_EOL;
+echo __FILE__.'@'.__LINE__.'$_SERVER<pre>['.var_dump($_SERVER,true).']</pre>'.PHP_EOL;
+echo __FILE__.'@'.__LINE__.'$GLOBALS<pre>['.var_dump($GLOBALS,true).']</pre>'.PHP_EOL;
+echo __FILE__.'@'.__LINE__.'$GLOBALS<pre>['.var_dump(array_keys ($GLOBALS),true).']</pre>'.PHP_EOL;
+#echo phpinfo();
+#exit;
 */
 
-require_once('config.php');
-echo __FILE__.'@'.__LINE__.'<br>';
+$SERVICECALL = new \JCORE\TRANSPORT\JSON\JSONRPC_1_0_API;
+
+	/**
+	* parse out the service name
+	*/
+	$replace = array("_"); 
+	$search  = array(
+		"\\",
+		'-',
+		'.',
+		':',
+	); 
+	
+	$serviceName = str_replace($search, $replace, $SERVICECALL->getServiceName() );
+	$profiler_namespace = $_SERVER["HOST_NAME"].'_'.$serviceName;
+	
+
+ 
 /*
 * load the transport layer
 */
-$filepath = JCORE_BASE_DIR.'TRANSPORT/REST/REST_API.class.php';
-#echo '$filepath['.$filepath.']<br>';
-require_once($filepath);
 
 
-
-
-echo __FILE__.'@'.__LINE__.'<br>';
-
-#require_once(JCORE_PLUGINS_DIR'config.php');
-
-/*
-* load the  service layer
-*/
-
-$RESTObj = new REST_STUB();
+$RESTObj = new PLUGINS\REST\REST_STUB();
 
 echo __FILE__.'@'.__LINE__.'<br>';
 
 echo __FILE__.'@'.__LINE__.'RESTObj<pre>'.var_export($RESTObj, true).'</pre><br>';
 echo __FILE__.'@'.__LINE__.'_REQUEST<pre>'.var_export($_REQUEST, true).'</pre><br>';
+
+	/**
+	require_once 'APIS/xhprof_lib/utils/xhprof_lib.php';
+    require_once 'APIS/xhprof_lib/utils/xhprof_runs.php';
+    $xhprof_data = xhprof_disable();
+    $xhprof_runs = new XHProfRuns_Default($profileDataDir);
+    $run_id = $xhprof_runs->save_run($xhprof_data, $profiler_namespace);
+	#echo '$SERVICECALL->getServiceName()'.$SERVICECALL->getServiceName();
+	******
+	xdebug_stop_trace();
+	*/
 ?>
