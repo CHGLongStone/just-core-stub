@@ -1,5 +1,11 @@
 # Included Scripts
 
+Scripts except `install.sh` (which should be _repeat run safe_) require the correct arguments to execute
+or they will return a usage description. 
+
+
+
+
 ## install.sh
 
 Install/Update the application
@@ -10,14 +16,11 @@ Install/Update the application
 * run composer update
 * execute further "installation" options
 
-## cfg_settings.sh
+## pre_release_check.sh
 
-Environment settings for the release scripts:
-
-* WORKING_DIRS
-  * directories that must/should be checked for changes 
-* JCORE_DEP_DIR_LIST
-  * just-core dependency directory list if you're using composer to bring in your own upstream repositories you can check them for local changes
+* check defined dependency repositories (your other packages) for local changes
+* check for uncommitted changes in your defined working directories 
+* run composer to verify no dependency upstream changes
   
 ## create_release.sh
 
@@ -27,11 +30,14 @@ Environment settings for the release scripts:
 * fetch and merge upstream changes, push updates to origin integration and origin master
 * create a release tag and push to origin 
 
-## pre_release_check.sh
+## cfg_settings.sh
 
-* check defined dependency repositories (your other packages) for local changes
-* check for uncommitted changes in your defined working directories 
-* run composer to verify no dependency upstream changes
+Environment settings for the release scripts. Source script, does NOT execute any changes.
+
+* WORKING_DIRS
+  * directories that must/should be checked for changes 
+* JCORE_DEP_DIR_LIST
+  * just-core dependency directory list if you're using composer to bring in your own upstream repositories you can check them for local changes
 
 # Supporting Scripts
 
