@@ -7,9 +7,11 @@
 # - install composer 
 # - self update
 # - install dependencies 
+#
+# safe to re-run 
 # 
 # Composer home: 			https://getcomposer.org
-# interactive quck ref:  	http://composer.json.jolicode.com/
+# interactive quick ref:  	http://composer.json.jolicode.com/
 # 
 #######################################
 
@@ -21,4 +23,5 @@ php composer.phar install
 php composer.phar update
 
 php composer.phar dump-autoload --optimize 
+
 

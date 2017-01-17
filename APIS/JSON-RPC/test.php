@@ -1,4 +1,12 @@
+<?php 
+if(!isset($_SERVER['HTTPS']) || 'on' != $_SERVER['HTTPS']){
+	$API_PATH = 'https://'.$_SERVER['SERVER_NAME'].'/api/';
+}
+
+?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
  <TITLE>test</TITLE>
@@ -11,14 +19,15 @@
  
  <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
  <script type="text/javascript" >
-	var API_PATH = 'http://just-core-stub.com';
+	//var API_PATH = 'http://just-core-stub.com';
+	var API_PATH = '<?php echo $API_PATH;?>';
 	
 	function doAjaxRequest2( ) {
 		objData = $("#jsonString").val();
-		objData = jQuery.parseJSON(objData);
+		//objData = jQuery.parseJSON(objData);
 		requestURL = $("#requestURL").val();
 		requestType = $("#requestType").val();
-		 
+		 alert('requestType['+requestType+']');
 		$.ajax({
 		  type: requestType,
 		  dataType: "json",
@@ -259,20 +268,6 @@ will return an array of of the result   <br>
 
 
 </div>
-<?php
-
-/*
-
-$requestObj = 'method=%5CSERVICE%5CCRUD%5CCRUD.retrieve&params%5BDSN%5D=HVSPROD&params%5Btable%5D=branch&params%5Bpk_field%5D=omgwdf&params%5Bpk%5D=0&id=';
-echo '<pre>'.$requestObj.'</pre>';
-
-echo '<pre>'.urldecode($requestObj).'</pre>';
-*/
 
 
-
-?>
-<script type="text/javascript" >
-
-</script>
 </body>

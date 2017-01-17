@@ -9,6 +9,13 @@ Install/Update the application
 * run composer update
 * execute further "installation" options
 
+## cfg_settings.sh
+Environment settings for the release scripts:
+* WORKING_DIRS
+  * directories that must/should be checked for changes 
+* JCORE_DEP_DIR_LIST
+  * just-core dependency directory list if you're using composer to bring in your own upstream repositories you can check them for local changes
+  
 ## create_release.sh
 * run a schema diff between current and upstream environments
 * run pre_release_check.sh
@@ -22,4 +29,4 @@ Install/Update the application
 * run composer to verify no dependency upstream changes
 
 # Supporting Scripts
-## [just-core-scripts](https://github.com/CHGLongStone/just-core-scripts)
+## [just-core-scripts](https://chglongstone.github.io/just-core-scripts)

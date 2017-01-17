@@ -1,8 +1,8 @@
-#Project Summary
+# Project Summary
 
 This project is an example of how to use the [just-core framework](https://github.com/CHGLongStone/just-core) 
 
-##Project setup
+## Project setup
 
     - Private repository: 
            - git clone this project
@@ -10,11 +10,11 @@ This project is an example of how to use the [just-core framework](https://githu
            - add it to your own repository
     - Public repository: feel free to fork this
 
-###Project install
+### Project install
 
 see: [Project-installation](https://github.com/CHGLongStone/just-core-stub/wiki/Project-installation)
 
-###The Layout
+### The Layout
 
 the expected install is expected to use composer https://getcomposer.org/
 
