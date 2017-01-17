@@ -31,9 +31,7 @@ $LOGIN_SERVICE = new JCORE\SERVICE\AUTH\LOGIN_SERVICE(); //$AUTH_HARNESS
 				'user_email' => $_POST["email"],
 			);
 			$_SESSION['SESSIONID'] = $USER_ENTITY->getSessionID($args);
-		
-		
-		
+			
 			session_write_close();
 			
 			#header('Location: '.$httpype.'://'.$_SERVER['SERVER_NAME'].'/Home');
