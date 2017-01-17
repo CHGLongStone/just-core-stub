@@ -1,0 +1,49 @@
+
+
+<!-- BEGIN exmp -->
+<li>
+<a href="javascript:void(0);" onclick="pageSingle('{exmp.ID}-TITLE');">
+	<span class="exmp_title">{exmp.TITLE}<span>
+</a>
+<div  id="{exmp.ID}-TITLE" style="display: none;" class="exmp_container" >
+	
+	<div id="{exmp.ID}-summary" >
+		<!-- <div>{exmp.type}</div> -->
+		<div>{exmp.description}</div>
+	</div>
+	<a href="javascript:void(0);" onclick="pageSingle('{exmp.ID}-call');">
+		<span class="exmp_title_sub">Show Call Example<span>
+	</a>
+	<br>
+	<div id="{exmp.ID}-call" style="display: none;">
+		<pre class="code" name="{exmp.ID}-call-value" id="{exmp.ID}-call-value">{exmp.call}</pre>
+		<button name="button" class="btn purple-sharp" onclick="populateCall('{exmp.ID}-call-value');">Click to Populate Request Form</button><br />
+		<a href="#top">Back to Request Form</a>
+	</div>
+	<br>
+	
+	<br>
+	<a href="javascript:void(0);" onclick="pageSingle('{exmp.ID}-responses');"><span class="exmp_title_sub">Show Example Responses<span></a>
+	<br>
+	<div id="{exmp.ID}-responses" style="display: none;">
+		<ul>
+	<!-- BEGIN responses -->
+		<li>
+			<a href="javascript:void(0);" onclick="pageSingle('{exmp.ID}-{exmp.responses.ID}');"><span class="exmp_title_sub">{exmp.responses.type}<span></a>
+			<div id="{exmp.ID}-{exmp.responses.ID}" style="display: none;">
+				<div >
+					{exmp.responses.description}
+				</div>
+				<pre class="code">{exmp.responses.raw_data}</pre>
+				<br>
+				<a href="#top">Back to Request Form</a>
+			</div>
+		</li>
+	<!-- END responses -->
+		</ul>
+	</div>
+</div>
+</li>
+<!-- END exmp -->
+
+

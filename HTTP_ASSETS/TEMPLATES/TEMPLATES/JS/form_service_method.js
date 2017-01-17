@@ -1,0 +1,5 @@
+/**
+*
+*/
+SERVICE_CALL = '{SERVICE_CALL}';
+SESSIONID = '{SESSIONID}';
