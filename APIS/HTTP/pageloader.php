@@ -57,11 +57,11 @@ if(file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$load_path.'.php')){
 		#echo '@'.__LINE__.'$loadPath['.$loadPath.'.php]';
 		echo 'here: '.__FILE__.'@'.__LINE__.' $loadPath==<pre>'.var_export($_SERVER["DOCUMENT_ROOT"].'/'.$loadPath.'.php', true).'</pre><br>';
 		*/
-		$loadPath = JCORE_TEMPLATES_DIR.'METRONIC/'.$loadPath.'.html';
+		$loadPath = JCORE_TEMPLATES_DIR.'HTML/'.$loadPath.'.html';
 		#echo 'here: '.__FILE__.'@'.__LINE__.' $load_path==<pre>'.var_export($GLOBALS["load_path"], true).'</pre><br>';
 		echo file_get_contents( $loadPath);
 		if(isset($GLOBALS["view"]) && 'Search' == $GLOBALS["view"]){
-			$loadPath = JCORE_TEMPLATES_DIR.'METRONIC/Search/_templates.html';
+			$loadPath = JCORE_TEMPLATES_DIR.'HTML/Search/_templates.html';
 			echo file_get_contents( $loadPath);
 
 		}
