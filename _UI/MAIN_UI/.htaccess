@@ -1,0 +1,42 @@
+###############################################################
+###	if you use the APPLICATION_ENV you should add .htaccess 
+###	to the .gitignore file to ensure the error display does not
+###	execute in your production environment
+###############################################################
+SetEnv APPLICATION_ENV "DEV"
+
+RewriteEngine On
+# The following rule tells Apache that if the requested filename
+# exists, simply serve it.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+# The following rewrites all other queries to index.php. The 
+# condition ensures that if you are using Apache aliases to do
+# mass virtual hosting, the base path will be prepended to 
+# allow proper resolution of the index.php file; it will work
+# in non-aliased environments as well, providing a safe, one-size 
+# fits all solution.
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::\2$
+RewriteRule ^(.*) - [E=BASE:%1]
+RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
+
+
+###############################################################
+###	some basic http caching if you're going to server static content
+###############################################################
+ExpiresActive On 
+ExpiresDefault "access plus 2 week" 
+Header append Cache-Control "public, must-revalidate"
+
+<FilesMatch "\.(gif|jpg|png|js|css)$">
+	FileETag MTime Size
+	#ExpiresActive On 
+	#ExpiresDefault "access plus 2 week" 
+	#ExpiresDefault "access plus 30 seconds" 
+	#Header append Cache-Control "public, must-revalidate"
+	AddOutputFilterByType DEFLATE text/css text/javascript application/javascript 
+	#text/html text/plain text/xml 
+</FilesMatch>
