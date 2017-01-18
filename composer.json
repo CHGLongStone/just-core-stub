@@ -16,10 +16,16 @@
 	"require" : {
 		"php" : ">=5.3.3",
 		"just-core/foundation" : "0.5.*",
-		"just-core/auth-page" : "dev-master",
+		"just-core/audit-entity" : "dev-master",
+		"just-core/auth-crude-acl" : "dev-master",
 		"just-core/auth-login" : "dev-master",
+		"just-core/auth-page" : "dev-master",
+		"just-core/cli-harness" : "dev-master",
+		"just-core/dao-orm" :  "dev-master",
 		"just-core/http-optimization" : "dev-master",
-		"just-core/cli-harness" : "dev-master"
+		"just-core/data-postgres" :  "dev-master",
+		"just-core/metronic" :  "dev-master",
+		"just-core/wiki-pages" :  "dev-master"
 	},
 	"suggest": {
 		"just-core/foundation": "PHP Enterprise (HA) High Availability Framework, develop quick and simple, deploy quick and consistent",
