@@ -1,22 +1,23 @@
 <?php
 /**
- * CONFIG_MANAGER (JCORE) CLASS
- * this is a Modified Preorder Tree Traversal based on the example given here:
- * http://articles.sitepoint.com/article/hierarchical-data-database
- *
- *
- *
- *
- *
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	EXAMPLE
- * @subpackage	BASIC 
- */
-/**
 *
- * @package	EXAMPLE
- * @subpackage	BASIC
-#echo __FILE__.'@'.__LINE__.'<br>' ;
+* this is a Modified Preorder Tree Traversal based on the example given here:
+* http://articles.sitepoint.com/article/hierarchical-data-database
+* dumps it out to html with the templater
+*
+*
+*
+*
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\SERVICE\EXAMPLE
+*/
+
+
+namespace JCORE\PLUGIN\EXAMPLE;
+/**
+* class renderNestedTree
+* 
+* @package	JCORE\SERVICE\EXAMPLE
 */
 class renderNestedTree
 {

@@ -13,7 +13,7 @@ CREATE TABLE `access_control_list` (
   `allow` varchar(255) NOT NULL DEFAULT '{"allow":["none"]}',
   `deny` varchar(255) NOT NULL DEFAULT '{"deny":["all"]}',
   PRIMARY KEY (`access_control_list_pk`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- ----------------------------
@@ -32,16 +32,31 @@ CREATE TABLE `client` (
 -- ----------------------------
 -- Table structure for client_fingerprint
 -- ----------------------------
-CREATE TABLE `client_fingerprint` (
-  `client_fingerprint_pk` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `client_user_fingerprint` (
+  `client_user_fingerprint_pk` int(11) NOT NULL AUTO_INCREMENT,
   `canvas_fingerprint` varchar(32) NOT NULL,
   `digital_fingerprint` varchar(32) DEFAULT NULL,
   `ipv4` varchar(15) DEFAULT NULL,
   `ipv6` varchar(40) DEFAULT NULL,
-  PRIMARY KEY (`client_fingerprint_pk`),
+  PRIMARY KEY (`client_user_fingerprint_pk`),
   KEY `canvas_fingerprint_idx` (`canvas_fingerprint`),
   KEY `digital_fingerprint_idx` (`digital_fingerprint`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for fingerprint_to_client_user
+-- ----------------------------
+CREATE TABLE `fingerprint_to_client_user` (
+  `fingerprint_to_client_user_pk` int(111) NOT NULL AUTO_INCREMENT,
+  `client_user_fingerprint_pk` int(11) NOT NULL,
+  `client_user_fk` int(11) NOT NULL,
+  PRIMARY KEY (`fingerprint_to_client_user_pk`),
+  KEY `client_user_fingerprint_pk_idx` (`client_user_fingerprint_pk`),
+  KEY `client_user_fk_idx` (`client_user_fk`),
+  CONSTRAINT `client_user_fingerprint_ibfk_1` FOREIGN KEY (`client_user_fingerprint_pk`) REFERENCES `client_user_fingerprint` (`client_user_fingerprint_pk`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  CONSTRAINT `client_user_fingerprint_ibfk_2` FOREIGN KEY (`client_user_fk`) REFERENCES `client_user` (`client_user_pk`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 -- ----------------------------
 -- Table structure for client_user
@@ -69,7 +84,7 @@ CREATE TABLE `client_user` (
   KEY `user_role_fk_idx` (`user_role_fk`),
   CONSTRAINT `client_user_to_client_fk_idx` FOREIGN KEY (`client_fk`) REFERENCES `client` (`client_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `user_role_fk_idx` FOREIGN KEY (`user_role_fk`) REFERENCES `user_role` (`user_role_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for client_whitelist
@@ -101,10 +116,10 @@ CREATE TABLE `client_log` (
   `log_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`client_log_pk`),
   KEY `client_log_to_client_user_fk` (`client_user_fk`),
-  KEY `client_log_to_client_fingerprint_fk` (`client_fingerprint_fk`),
-  CONSTRAINT `client_log_to_client_fingerprint_fk` FOREIGN KEY (`client_fingerprint_fk`) REFERENCES `client_fingerprint` (`client_fingerprint_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  KEY `client_log_to_client_fingerprint_fk` (`client_user_fingerprint_fk`),
+  CONSTRAINT `client_log_to_client_fingerprint_fk` FOREIGN KEY (`client_fingerprint_fk`) REFERENCES `client_fingerprint` (`client_user_fingerprint_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `client_log_to_client_user_fk` FOREIGN KEY (`client_user_fk`) REFERENCES `client_user` (`client_user_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 -- ----------------------------
@@ -126,7 +141,7 @@ CREATE TABLE `iso_countries` (
   KEY `ISO_2_Letter_idx` (`ISO_3166-1_2_Letter_Code`),
   KEY `ISO_3 Letter_idx` (`ISO_3166-1_3 Letter_Code`),
   KEY `Country_Code_TLD_idx` (`IANA_Country_Code_TLD`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -139,7 +154,7 @@ CREATE TABLE `user_role` (
   `parent_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_role_pk`),
   KEY `user_role_pk` (`user_role_pk`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `cron_log` (
   `cron_log_pk` int(11) NOT NULL AUTO_INCREMENT,
@@ -154,7 +169,7 @@ CREATE TABLE `cron_log` (
   KEY `job_name_idx` (`job_name`),
   KEY `service_call_idx` (`service_call`),
   KEY `last_initialization_idx` (`last_initialization`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 

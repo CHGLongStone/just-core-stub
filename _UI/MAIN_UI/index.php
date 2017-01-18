@@ -1,15 +1,14 @@
 <?php
 /**
- * update
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	API_STUB_AJAX
- */
- /**
+* update
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\UI\MAIN
+*/
+/*
 echo 'here: '.__FILE__.'@'.__LINE__.' $GLOBALS==<pre>'.var_export($_SERVER, true).'</pre><br>';
 exit;
 echo '*************DAFUQ!!!!!!!!!!!!!!!!!!!!!!!!!!!!'.PHP_EOL;
- */
+*/
 if('/' == $_SERVER["REQUEST_URI"]){
 		#$loadPath = JCORE_TEMPLATES_DIR.'METRONIC/'.$loadPath.'.html';
 		$loadPath = 'index.html';

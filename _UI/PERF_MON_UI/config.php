@@ -1,10 +1,9 @@
 <?php
 /**
- * update
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	API_DEFAULT_ADMIN
- */
+* update
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\UI\PERF_MON
+*/
 /**
 *
 */

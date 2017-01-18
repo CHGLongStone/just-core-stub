@@ -1,23 +1,22 @@
 <?php 
 /**
- * Basic example to show how plugins work
+ * Basic example to show static calls work
  * 
  * 
  * @author		Jason Medland
-* @package		JCORE\PLUGIN\EXAMPLE
-* @subpackage	BASIC
+* @package		JCORE\SERVICE\EXAMPLE
  */
-namespace JCORE\PLUGIN\EXAMPLE;
+namespace JCORE\SERVICE\EXAMPLE;
 
 /**
  * Class basicAPI
  *
- * @package JCORE\PLUGIN\EXAMPLE
+ * @package JCORE\SERVICE\EXAMPLE
 */
 class basicAPI{
 	
 	/**
-	* 
+	* function1 
 	* @access public 
 	* @param mixed $subTemplater
 	* @return
@@ -28,7 +27,7 @@ class basicAPI{
 		return $stringval;
 	}
 	/**
-	* 
+	* function2
 	* @access public 
 	* @param mixed $setTime
 	* @return string
