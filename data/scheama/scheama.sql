@@ -156,6 +156,10 @@ CREATE TABLE `user_role` (
   KEY `user_role_pk` (`user_role_pk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+-- ----------------------------
+-- Table structure for cron_log
+-- ----------------------------
 CREATE TABLE `cron_log` (
   `cron_log_pk` int(11) NOT NULL AUTO_INCREMENT,
   `job_name` varchar(255) NOT NULL,
