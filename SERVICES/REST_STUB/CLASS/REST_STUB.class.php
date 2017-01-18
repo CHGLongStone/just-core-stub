@@ -1,17 +1,17 @@
 <?php
 /**
- * REST_API
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	PLUGINS\REST_STUB\REST_STUB
- * @subpackage	PLUGINS\REST_STUB\REST_STUB 
- */
+* REST_API
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\SERVICE\EXAMPLE\REST
+*
+*/
 
-namespace PLUGINS\REST;
+namespace JCORE\SERVICE\EXAMPLE\REST;
 use JCORE\TRANSPORT\REST\REST_API as REST_API;
 /**
  * Class REST_STUB
  *
- * @package PLUGINS\REST
+ * @package JCORE\SERVICE\EXAMPLE\REST
 */
 class REST_STUB extends REST_API{
 

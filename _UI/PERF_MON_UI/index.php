@@ -1,25 +1,24 @@
 <?php 
 /**
-OUTLINE
-this is the default layout for a standard API, in this case a regular website
-the base structure loads content based on the URI passed (used mod-rewrite for pretty URL's)
-for efficiency and change managements sake use different API's for different "classes" of task
-use one for generating HTML content, use another as CDN (static assets), use another as Media delivery
-and others for "true" API's (AJAX, SOAP, etc.)
-
-the base logic is assumed to be a "branching" style and each branch is handled by a central switch statement
-
-ie. trunk starts in this file, the first branch is defined in another switch statement in another file.
-this may seem a bit cumbersome but the trade off for managability is well worth it.
-if your logical "branches" are defined effectively you will have clean separation in your code and will be able 
-to change parts of the implementation with impacting the whole, you can also leverage a "switching" mechanism
-where you can decide the "branch" implemented at run time.
-
-TEMPLATER
-
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	API_DEFAULT_ADMIN
+* OUTLINE
+* this is the default layout for a standard API, in this case a regular website
+* the base structure loads content based on the URI passed (used mod-rewrite for pretty URL's)
+* for efficiency and change managements sake use different API's for different "classes" of task
+* use one for generating HTML content, use another as CDN (static assets), use another as Media delivery
+* and others for "true" API's (AJAX, SOAP, etc.)
+* 
+* the base logic is assumed to be a "branching" style and each branch is handled by a central switch statement
+* 
+* ie. trunk starts in this file, the first branch is defined in another switch statement in another file.
+* this may seem a bit cumbersome but the trade off for managability is well worth it.
+* if your logical "branches" are defined effectively you will have clean separation in your code and will be able 
+* to change parts of the implementation with impacting the whole, you can also leverage a "switching" mechanism
+* where you can decide the "branch" implemented at run time.
+* 
+* TEMPLATER
+* 
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\UI\PERF_MON
 */
 /**
 *

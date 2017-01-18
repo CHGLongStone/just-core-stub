@@ -1,25 +1,24 @@
 <?php 
 /**
- * CONFIG_MANAGER (JCORE) CLASS
-
-
-   	+-----------------------------------------------------------------------+
-   	| eAccelerator control panel                                           	|
-   	+-----------------------------------------------------------------------+
-   	| Copyright (c) 2004-2010 eAccelerator                                 	|
-	| http://eaccelerator.net                                              	|
-   	+-----------------------------------------------------------------------+
-   	| This source file is subject to version 3.0 of the PHP license,       	|
-	| that is bundled with this package in the file LICENSE, and is        	|
-	| available through the world-wide-web at the following url:           	|
-	| http://www.php.net/license/3_0.txt.                                  	|
-	| If you did not receive a copy of the PHP license and are unable to   	|
-	| obtain it through the world-wide-web, please send a note to          	|
-	| license@php.net so we can mail you a copy immediately.             	|
-	+-----------------------------------------------------------------------+
- * included in JCORE as a conveinience
- * @package	JCORE
- * @subpackage	API_DEFAULT_ADMIN	
+* CONFIG_MANAGER (JCORE) CLASS
+* 
+* 
+*   +-----------------------------------------------------------------------+* 
+*   | eAccelerator control panel                                           	|
+*   +-----------------------------------------------------------------------+
+*   | Copyright (c) 2004-2010 eAccelerator                                 	|
+* 	| http://eaccelerator.net                                              	|
+* 	+-----------------------------------------------------------------------+
+*   | This source file is subject to version 3.0 of the PHP license,       	|
+* 	| that is bundled with this package in the file LICENSE, and is        	|
+* 	| available through the world-wide-web at the following url:           	|
+* 	| http://www.php.net/license/3_0.txt.                                  	|
+* 	| If you did not receive a copy of the PHP license and are unable to   	|
+* 	| obtain it through the world-wide-web, please send a note to          	|
+* 	| license@php.net so we can mail you a copy immediately.             	|
+* 	+-----------------------------------------------------------------------+
+* included in JCORE as a conveinience
+* @package	JCORE\UI\PERF_MON
 */
 #ini_set("eaccelerator.allowed_admin_path", "/var/www");
 /**

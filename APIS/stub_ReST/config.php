@@ -2,8 +2,8 @@
 /**
  * CONFIG_MANAGER (JCORE) CLASS
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	DEFAULT_API
+ * @package	JCORE\API\REST
+ * 
  */
 /**
 * check the environment first

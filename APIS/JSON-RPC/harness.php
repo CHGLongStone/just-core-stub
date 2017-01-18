@@ -13,7 +13,7 @@
  * 		
  * - THEN we add things specific to our implementation
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
+ * @package	JCORE\API\JSON_RPC
  * 
  */
 /**

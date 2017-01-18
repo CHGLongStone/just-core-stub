@@ -1,10 +1,34 @@
 <?php
+/**
+ * update
+ * @author	Jason Medland<jason.medland@gmail.com>
+ * @package	JCORE\API\REST
+ * 
+ */
 
 
-
+/**
+*
+*
+* class restrequest post a request
+*
+*
+* @package JCORE\API\REST
+*/
 class restrequest{
-	
+	/**
+	* requestURL
+	* 
+	* @access public 
+	* @var string
+	*/
 	public $requestURL = 'http://auth-dev.somcompany.com/REST/';
+	/**
+	* extensions
+	* 
+	* @access protected 
+	* @var string
+	*/
 	protected $extensions  = array(
 		'.js'   => 'Content-type: text/javascript',
 		'.json' =>  'Content-type: application/json',
@@ -19,7 +43,15 @@ class restrequest{
 		'.jpg'  => 'Content-type: image/jpeg',
 		'.png'  => 'Content-type: image/png'
 	);
-	
+	/**
+	 * __construct
+	 * 
+	 * @access public 
+	 * @param string mimeType
+	 * @param string reqestType
+	 * @param mixed reqestMessage
+	 * @return bool
+	*/
 	public function __construct($mimeType, $reqestType, $reqestMessage ){
 		if(isset($mimeType)){
 			$this->mimeType = $mimeType;
@@ -43,7 +75,13 @@ class restrequest{
 	}
 
 	
-	
+	/**
+	 * makeCall
+	 * 
+	 * @access public 
+	 * @param null
+	 * @return null
+	*/
 	public function makeCall(){
 	
 		$header[] = $this->extensions[$this->mimeType];

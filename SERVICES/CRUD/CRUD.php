@@ -1,23 +1,20 @@
 <?php
 /**
- * AJAX_STUB is a stub for creating an AJAX service
- * A description of the object should be included here for the service introspection 
- * provided by SOA_BASE
- * service introspection is designed to produce something similar to a WSDL in SOAP
+ * CRUD service example
  * 
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	PLUGINS\AJAX_STUB\AJAX_STUB
- * @subpackage	PLUGINS\AJAX_STUB\AJAX_STUB 
+ * @package	JCORE\SERVICE\EXAMPLE\CRUD
+ * 
  */
  
 
-namespace SERVICE\CRUD;
+namespace JCORE\SERVICE\EXAMPLE\CRUD;
 use JCORE\TRANSPORT\SOA\SOA_BASE as SOA_BASE;
 use JCORE\DAO\DAO as DAO;
 /**
  * Class AJAX_STUB
  *
- * @package SERVICE\CRUD 
+ * @package JCORE\SERVICE\EXAMPLE\CRUD 
 */
 class CRUD extends SOA_BASE{ 
 	/** 

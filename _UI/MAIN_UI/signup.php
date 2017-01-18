@@ -1,10 +1,10 @@
 <?php
 /**
- * update
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	API_STUB_AJAX
- */
+* signup 
+* 
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\UI\MAIN
+*/
 
 /**
 	echo 'here: '.__FILE__.'@'.__LINE__.' $_SERVER==<pre>'.var_export($_SERVER, true).'</pre><br>';

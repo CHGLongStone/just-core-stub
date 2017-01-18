@@ -2,7 +2,7 @@
 /**
  * update
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
+ * @package	JCORE\UI\MAIN 
  * 
  */
 

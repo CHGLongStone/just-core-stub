@@ -1,31 +1,30 @@
 <?php
 /**
- * the point of this file is encapsulate things we have to do for most/every page 
- * - FIRST we set a hook on any configuration page like this that is HTTP accessible
- * 
- * - SECOND we do some basic flags to determine if we are in development of on production 
- * 
- * - THIRD we set the application root directory so we know were to find your "SERVICES"
- *   directory, this can be adjusted in APPLICATION_ROOT/composer.json in the 
- *   autoload:classmap section, see: 
- *		https://getcomposer.org/doc/04-schema.md#classmap
- * 		https://getcomposer.org/doc/03-cli.md#dump-autoload
- * 		
- * - THEN we add things specific to our implementation
- * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE
- * @subpackage	API_STUB_AJAX
- */
-/**
-* ***FIRST***
-* repeat this block (or some semblance) for any file with HTTP access that 
-* you don't want loaded directly
-* exit with an error for automated testing
+* the point of this file is encapsulate things we have to do for most/every page 
+* - FIRST we set a hook on any configuration page like this that is HTTP accessible
+* 
+* - SECOND we do some basic flags to determine if we are in development of on production 
+* 
+* - THIRD we set the application root directory so we know were to find your "SERVICES"
+*   directory, this can be adjusted in APPLICATION_ROOT/composer.json in the 
+*   autoload:classmap section, see: 
+*		https://getcomposer.org/doc/04-schema.md#classmap
+* 		https://getcomposer.org/doc/03-cli.md#dump-autoload
+* 		
+* - THEN we add things specific to our implementation
+* @author	Jason Medland<jason.medland@gmail.com>
+* @package	JCORE\UI\MAIN
 */
 /*
 echo 'strstr('.__FILE__.', '.$_SERVER['REQUEST_URI'].')<pre>['.strstr(__FILE__, $_SERVER["REQUEST_URI"]).']['.is_bool(strstr(__FILE__, $_SERVER["REQUEST_URI"])).']</pre>'.PHP_EOL;
 echo 'strstr('.__FILE__.', '.$_SERVER['SCRIPT_NAME'].')<pre>['.strstr(__FILE__, $_SERVER["SCRIPT_NAME"]).']</pre>'.PHP_EOL;
 echo 'strstr('.__FILE__.', '.$_SERVER['PHP_SELF'].')<pre>['.strstr(__FILE__, $_SERVER["PHP_SELF"]).']</pre>'.PHP_EOL;
+*/
+/**
+* ***FIRST***
+* repeat this block (or some semblance) for any file with HTTP access that 
+* you don't want loaded directly
+* exit with an error for automated testing
 */
 if(
 	$_SERVER['SCRIPT_NAME'] == strstr(__FILE__, $_SERVER['SCRIPT_NAME'])

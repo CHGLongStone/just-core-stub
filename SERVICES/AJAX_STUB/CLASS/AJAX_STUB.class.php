@@ -6,17 +6,17 @@
  * service introspection is designed to produce something similar to a WSDL in SOAP
  * 
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	PLUGINS\AJAX_STUB\AJAX_STUB
- * @subpackage	PLUGINS\AJAX_STUB\AJAX_STUB 
+ * @package	JCORE\SERVICE\EXAMPLE\AJAX_STUB
+ * 
  */
  
 
-namespace PLUGINS\AJAX_STUB\AJAX_STUB;
+namespace JCORE\SERVICE\EXAMPLE\AJAX_STUB;
 use JCORE\LOAD\TRANSPORT\SOA\SOA_BASE as SOA_BASE;
 /**
  * Class AJAX_STUB
  *
- * @package PLUGINS\AJAX_STUB\AJAX_STUB
+ * @package JCORE\SERVICE\EXAMPLE\AJAX_STUB
 */
 class AJAX_STUB extends SOA_BASE{ 
 	/** 
