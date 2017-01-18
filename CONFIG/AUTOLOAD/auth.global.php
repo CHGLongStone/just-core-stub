@@ -25,23 +25,26 @@ return array(
 				),
 			),
 		),
+		'PAGE_FILTER_ALLOW_PUBLIC' => array(
+			'FILTER_TYPE' => 'WHITELIST',
+			'ALLOW' => array(
+				'login.php',
+				'logout.php',
+				'signup.php',
+			),
+			'DENY' => array(),
+		),
 		/*
-		* see constructor here:
-		* https://github.com/hautelook/phpass/blob/master/src/Hautelook/Phpass/PasswordHash.php
-		* http://www.openwall.com/phpass/
 		*/
-		'PHPASS' => array(
-			'FORM1' => array( //these are profile sections 
-				'iteration_count_log2' => 8, 
-				'portable_hashes' => false,
-				'DSN' =>	'blackwatch',
-				'TABLE_NAME' =>	'client',
-				'USR_COLUMN' =>	'user_name',
-				'PWD_COLUMN' =>	'password',
-				'FORM_USR' =>	'usr',
-				'FORM_PWD' =>	'pwd',
+		'PAGE_FILTER_DENY_PUBLIC' => array(
+			'FILTER_TYPE' => 'BLACKLIST',
+			'DENY' => array(
+				'profile.php',
+				'history.php',
+				'personal.php',
 			),
 		),
+		
     ),
 );
 
