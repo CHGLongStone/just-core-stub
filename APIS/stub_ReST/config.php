@@ -2,7 +2,7 @@
 /**
  * CONFIG_MANAGER (JCORE) CLASS
  * @author	Jason Medland<jason.medland@gmail.com>
- * @package	JCORE\API\
+ * @package	JCORE\API\REST
  * 
  */
 /**
