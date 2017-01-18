@@ -1,0 +1,4 @@
+*.php
+compile*
+trace.*.xt
+*.xhprof
