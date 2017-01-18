@@ -2,7 +2,7 @@
 return array(
 	"DSN" => array(
 		"JCORE" => array(
-			"dbType"=>"MySQL",
+			"dbType"=>"MYSQL",
 			#implementation=>"mysql",
 			"host"=>"127.0.0.1",
 			"port"=>3306,
@@ -12,7 +12,5 @@ return array(
 			"persistent"=>"true",
 		)
 	)
-
-	
 );
 ?>
