@@ -14,8 +14,8 @@
 	],
 	"version" : "1.0.0",
 	"require" : {
-		"php" : ">=5.3.3",
-		"just-core/foundation" : "0.5.*",
+		"php" : ">=5.3.7",
+		"just-core/foundation" : "dev-master",
 		"just-core/audit-entity" : "dev-master",
 		"just-core/auth-crude-acl" : "dev-master",
 		"just-core/auth-login" : "dev-master",
