@@ -109,7 +109,7 @@ CREATE TABLE `client_whitelist` (
 CREATE TABLE `client_log` (
   `client_log_pk` int(11) NOT NULL AUTO_INCREMENT,
   `client_user_fk` int(11) NOT NULL,
-  `client_fingerprint_fk` int(11) NOT NULL,
+  `client_user_fingerprint_fk` int(11) NOT NULL,
   `log_code` float(11,0) NOT NULL,
   `log_message` varchar(60) NOT NULL,
   `log_data` text NOT NULL,
@@ -117,7 +117,7 @@ CREATE TABLE `client_log` (
   PRIMARY KEY (`client_log_pk`),
   KEY `client_log_to_client_user_fk` (`client_user_fk`),
   KEY `client_log_to_client_fingerprint_fk` (`client_user_fingerprint_fk`),
-  CONSTRAINT `client_log_to_client_fingerprint_fk` FOREIGN KEY (`client_fingerprint_fk`) REFERENCES `client_fingerprint` (`client_user_fingerprint_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `client_log_to_client_fingerprint_fk` FOREIGN KEY (`client_user_fingerprint_fk`) REFERENCES `client_fingerprint` (`client_user_fingerprint_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `client_log_to_client_user_fk` FOREIGN KEY (`client_user_fk`) REFERENCES `client_user` (`client_user_pk`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
