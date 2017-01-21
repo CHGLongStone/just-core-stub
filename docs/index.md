@@ -1,18 +1,17 @@
 # Project Summary
 
-This project is an example of how to use the [just-core framework](https://github.com/CHGLongStone/just-core) 
+This project is an example of how to use the [just-core framework](https://chglongstone.github.io/just-core) 
 
-## Project setup
+## Requirements 
 
-    - Private repository: 
-           - git clone this project
-           - delete the .git directory
-           - add it to your own repository
-    - Public repository: feel free to fork this
+It is expected you will be using this framework on a *nix operating system with command line access
 
-### Project install
+your command line user will require 
+  - write access to the application install directory
 
-see: [Project-installation](https://github.com/CHGLongStone/just-core-stub/wiki/Project-installation)
+## Project install
+
+see: [Project-Installation](Project-Installation)
 
 ### The Layout
 

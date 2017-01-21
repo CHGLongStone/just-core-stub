@@ -1,7 +1,6 @@
 # Included Scripts
 
-Scripts except `install.sh` (which should be _repeat run safe_) require the correct arguments to execute
-or they will return a usage description. 
+Scripts require the correct arguments to execute or they will return a usage description. 
 
 
 
@@ -14,7 +13,11 @@ Install/Update the application
 * run composer self-update
 * run composer install
 * run composer update
-* execute further "installation" options
+* install the database stub sql or execute another sql file
+* over write ./CONFIG/AUTOLOAD/data.global.php
+* create OR over write ./CONFIG/AUTOLOAD/data.local.php
+  * excluded from source control
+
 
 ## pre_release_check.sh
 
