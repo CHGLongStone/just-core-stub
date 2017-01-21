@@ -12,8 +12,15 @@ PURPLE='\e[1;35m'
 CYAN='\e[1;36m'
 GREY='\e[1;37m'
 NC='\e[0m'              # No Color
+#FFS centOS
 MUTED='\e[1;22m'             # HELLO!!
 DAFUQ='\e[0m'              # DAFUQ!!
+BOLD='\e[1m'              # DAFUQ!!
+ITALIC='\e[3m'              # DAFUQ!!
+UNDERLINE='\e[9m'              # DAFUQ!!
+STRIKETHROUGH='\e[31m'              # DAFUQ!!
+
+
 
 
 #######################################
