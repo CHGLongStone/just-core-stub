@@ -27,7 +27,16 @@ the expected install is expected to use composer https://getcomposer.org/
 	/
 ```
 
-Services are called by name-space via the transport layer in their native transport envelope, the service manager then calls the service in the format `[serviceName][methodName]` with the arguments being supplied as the transport envelope dictates. When the response to the service call has been processed the service will respond in the format dictated for the API (AjAX->AJAX, ReST->JSON, ReST->URI_ENCODED, ReST->SOAP)
+Services are called by name-space via the transport layer in their native transport envelope, the service manager then calls the service in the format 
+`[serviceName][methodName]` with the arguments being supplied as the transport envelope dictates. When the response to the service call has been processed 
+the service will respond in the format dictated for the API 
+ * AjAX->JSON-RPC
+ * ReST->JSON
+ * ReST->URI_ENCODED
+ * ReST->SOAP
+ * ...
+
+Constraints
 
 * Services must conform to one of the name spaces specified in [supported composer autoload formats](https://getcomposer.org/doc/04-schema.md#autoload).
 * Services can be called singly, chained or on demand within the application architecture.
