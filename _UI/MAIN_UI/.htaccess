@@ -1,9 +1,12 @@
 ###############################################################
-###	if you use the APPLICATION_ENV you should add .htaccess 
-###	to the .gitignore file to ensure the error display does not
-###	execute in your production environment
+#	if you use the APPLICATION_ENV you should should set it 
+#	in the virtual host configuration 
+#	
+#	if you add APPLICATION_ENV to .htaccess you should add .htaccess
+#	to the .gitignore file to ensure the error display does not
+#	execute in your production environment
 ###############################################################
-SetEnv APPLICATION_ENV "DEV"
+# SetEnv APPLICATION_ENV "DEV" # can override here but this should be 
 
 RewriteEngine On
 # The following rule tells Apache that if the requested filename
