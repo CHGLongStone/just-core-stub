@@ -1,2 +1,6 @@
 theme: jekyll-theme-architect
+theme: jekyll-theme-architect
+title: [just-core/stub]
+description: [ An introduction to the just-core PHP Framework for Enterprise Service Buses]
+show_downloads: ["true"]
 
