@@ -1,0 +1,243 @@
+/* here you can put your own css to customize and override the theme DAFUQ! */
+
+/***
+Rounded Portlets
+***/
+/*
+.portlet {
+	border-radius: 4px !important;
+}
+
+.portlet .portlet-title {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+.portlet .portlet-body,
+.portlet .portlet-body .form-actions  {
+	border-radius: 0px 0px 4px 4px !important;
+}
+*/
+
+/*
+Change Quick Sidebar Width
+*/
+
+/*
+.page-quick-sidebar-wrapper {
+  right: -370px;
+  width: 370px;
+}
+
+.page-quick-sidebar-open.page-quick-sidebar-push-content .page-sidebar-wrapper {
+  margin-left: -370px;
+}
+
+.page-quick-sidebar-open.page-quick-sidebar-push-content .page-footer {
+  margin-right: 370px;
+  margin-left: -370px;
+}
+
+.page-sidebar-reversed.page-quick-sidebar-open.page-quick-sidebar-push-content .page-sidebar-wrapper {
+  margin-right: 370px;
+}
+
+.page-quick-sidebar-open.page-quick-sidebar-push-content.page-quick-sidebar-full-height .page-header {
+  margin-left: -370px;
+}
+
+.page-quick-sidebar-wrapper .page-quick-sidebar .page-quick-sidebar-list {
+  width: 370px !important;
+}
+
+.page-quick-sidebar-wrapper .page-quick-sidebar .page-quick-sidebar-item {
+  width: 370px !important;
+  margin-left: 370px;
+}
+
+.page-quick-sidebar-wrapper .page-quick-sidebar .page-quick-sidebar-content-item-shown .page-quick-sidebar-list {
+  margin-left: -370px;
+}
+*/
+
+body{color:#fff}
+
+/* Links */
+a {
+  text-shadow: none;
+  color: #c8d046;
+}
+a:hover {
+  color: #adb52e;
+}
+
+a:focus      {color: #c8d046;}
+
+/*
+* beautiful image from http://lbc9.net/digital-art/fractals/black-and-white-fractals/wallpapers-3.html 
+* beautiful image from http://lbc9.net/digital-art/fractals/black-and-white-fractals/wallpapers-3.html 
+*  stuff fractals-circles-desktop-background.jpg 
+*/
+body,.login{
+
+  background:  #e5fdff url(/assets/images/fractals-circles-desktop-background.jpg)  no-repeat  center top scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/**
+* beautiful image from http://lbc9.net/digital-art/fractals/black-and-white-fractals/wallpapers-5.html
+* matrix-lines-fractal-hd-1080p.jpg
+* http://www.fractal-recursions.com/files/mech0030.html 
+* url(/assets/images/12354v.jpg)
+*/
+
+.logo {
+  background:  #898989   no-repeat  center top scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*
+* beautiful image from http://lbc9.net/digital-art/fractals/black-and-white-fractals/wallpapers-5.html
+*/
+.login {
+  background:  #898989 url(/assets/images/fractals-circles-desktop-background.jpg)  no-repeat  center top scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.page-header.navbar {
+    background-color: rgba(120,120,120,.7);
+    box-shadow: 2px 0 3px rgba(0,0,0,.5);
+}
+
+.page-header-fixed .page-container {
+    margin-top: 70px;
+}
+
+.page-sidebar-wrapper {
+    background-color: rgba(0,0,0,.5);
+}
+
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover, .page-sidebar {
+    background-color: transparent;
+}
+
+
+
+/*
+* beautiful image from https://openclipart.org/detail/182880/cube-transparent
+* .page-container-bg-solid .page-content {background:transparent}
+*/
+.login .content,
+.portlet.light
+{background: #787878 url(/assets/images/transparent_isometric_cube.svg) no-repeat right top scroll;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.25);
+    -webkit-transition: none;
+    transition: none;}
+
+.portlet.light	.panel, .portlet.light .table-scrollable {
+    background-color: rgba(0,0,0,.2);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.25);
+}
+
+
+.table-scrollable>.table {
+    background-color: transparent;
+}
+
+.portlet > .portlet-title , .portlet-body{
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.12);}
+	
+	.panel-footer, .panel-heading {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+	    box-shadow: 0 1px 0 0 rgba(255,255,255,.12);}
+	
+	.panel,.table-scrollable   {border: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.12);}
+
+	.table-hover>tbody>tr:hover {
+     background-color: rgba(0,0,0,.5);
+}	
+	
+	.form-control, .form-control:focus {
+    background-color: rgba(0,0,0,.4);
+    border: none;
+    color: #fff;
+}
+
+.form .form-actions {
+    border-top: none;
+}
+
+
+/*LISTS*/
+
+.mt-element-list .list-simple.mt-list-container {
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;}
+	
+.mt-element-list .list-simple.mt-list-container ul>.mt-list-item{
+	border-bottom: 1px solid rgba(0,0,0,.12);
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.12);
+	}
+	.mt-element-list .list-simple.mt-list-container ul>.mt-list-item:last-child {
+    box-shadow: none;
+}
+.mt-element-list .list-simple.mt-list-container ul>.mt-list-item>.list-item-content {
+    padding: 0px 15px 0 30px;
+}
+
+/*examples styling*/
+.btn.purple-sharp{margin-bottom:12px}
+
+.wikimg img{display: block;
+    max-width: 100%;
+    height: auto;}
+	
+.page-sidebar .sidebar-toggler, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .sidebar-toggler {
+    margin-bottom: 15px;
+}	
+
+@media (min-width: 992px){
+.page-container {
+    display: flex;
+    align-items: stretch;
+}
+.page-content-wrapper .page-content {
+    margin-left: 0px;
+}
+}
+
+pre {
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 1.42857143;
+	color: #333;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: rgba(200,200,200,.2)!important;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* Page content */
+.page-content {
+	margin-top: 0px;
+	padding: 0px;
+	background: #ffffff url(/assets/images/transparent_isometric_cube.svg) no-repeat right top scroll;
+	/*
+	background-color: rgba(200,200,200,.8) ;
+	*/
+	color: #000;
+}
+	
+	
