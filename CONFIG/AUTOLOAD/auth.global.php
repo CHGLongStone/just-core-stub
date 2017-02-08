@@ -44,7 +44,85 @@ return array(
 				'personal.php',
 			),
 		),
-		
+		/*
+		*/
+		'LOGIN_SERVICE' => array(
+			'AUTH_TYPE' => array(
+				'USER' => array(
+					'DSN' => 'JCORE',
+					'table' => 'client_user',
+					'pk_field' => 'client_user_pk',
+					'foundation' => true,
+					#'search' => array(
+					#	'email' => $args["email"],
+					#),
+				),
+				'SESSION' => array(
+					'DSN' => 'JCORE',
+					'table' => 'client_user',
+					'pk_field' => 'client_user_pk',
+					'foundation' => true,
+					#'search' => array(
+					#	'email' => $args["email"],
+					#),
+				),
+				'API' => array(
+					'DSN' => 'JCORE',
+					'table' => 'client',
+					'pk_field' => 'client_pk',
+					'foundation' => true,
+					#'search' => array(
+					#	'email' => $args["email"],
+					#),
+				),
+				
+				
+			),
+		),
+		'CRUDE_ACL_SCHEMES' => array(
+			'VERY_STRICT' => array(
+				'Order' => 'Deny,Allow',
+				'Deny' => 'All',
+				'Allow' => 'admin',
+			),
+			'MORE_STRICT' => array(
+				'Order' => 'Deny,Allow',
+				'Deny' => 'All',
+				'Allow' => 'admin,super',
+			),
+			'STRICT' => array(
+				'Order' => 'Deny,Allow',
+				'Deny' => 'All',
+				'Allow' => 'admin,super,legal_adviser,industry_adviser',
+			),
+			'PERMISSIVE' => array(
+				'Order' => 'Allow,Deny',
+				'Deny' => 'guest',
+				'Allow' => 'All',
+			),
+			'VERY_PERMISSIVE' => array(
+				'Order' => 'Allow,Deny',
+				'Deny' => 'All',
+				'Allow' => 'All',
+			),
+		),
+		'ACL_ENTITY_CONTAINER' => array(
+			'ROLE' => array(
+				'DSN' => 'JCORE',
+				'table' => 'user_role',
+				'pk_field' => 'user_role_pk',
+				'fk_field' => 'user_role_fk',
+				'user_role' => 'role',
+			),
+			'RULE' => array(
+				'DSN' => 'JCORE',
+				'SELECT' => '*, rule_name AS rule',
+				'table' => 'access_control_list',
+				'pk_field' => 'access_control_list_pk',
+				#'fk_field' => 'access_control_list_fk',
+				'user_rule' => 'rule_name',
+			),
+		),
     ),
 );
 
