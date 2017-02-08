@@ -1,3 +1,4 @@
+#
 *.php
 compile*
 trace.*.xt
