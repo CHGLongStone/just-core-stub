@@ -1,0 +1,41 @@
+<svg width="642.52" height="706.92" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="linearGradient3043" y2="0.26864" y1="0.46" x2="1" x1="-0.000005">
+   <stop id="stop9888" stop-opacity="0.13303" offset="0"/>
+   <stop id="stop9890" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3045" y2="0.175748" y1="0.685915" x2="0.858219" x1="0.110023">
+   <stop id="stop6332" stop-opacity="0.38532" offset="0"/>
+   <stop id="stop6334" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3047" y2="0.265352" y1="0.694459" x2="0.000947" x1="1.000011">
+   <stop id="stop7225" stop-opacity="0.43119" offset="0"/>
+   <stop id="stop7227" stop-opacity="0.036697" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient3049" y2="0.5" y1="0.5" x2="1" x1="0">
+   <stop id="stop5439" stop-opacity="0.35052" offset="0"/>
+   <stop id="stop5441" stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata>image/svg+xmlOpenclipartCube transparent2013-09-03T16:56:59Cube gris-transparent vue de cÃ´tÃ©.https://openclipart.org/detail/182880/cube-transparent-by-justin-ternet-182880Justin Ternet3Dcubegraphismgraphismeiconiconemodelisation</metadata>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="644.52" height="708.92" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="layer1">
+   <g id="g16097" transform="matrix(2.6912,0,0,2.6912,-12.879,-987.01) " fill-rule="evenodd">
+    <path id="path2780" fill="url(#linearGradient3043)" d="m220.495597,538.71807l-72.14,90.71l-127.14,-67.85l85,-57.15l114.28,34.29z"/>
+    <g id="g16091">
+     <path id="path2774" fill="url(#linearGradient3045)" d="m4.785597,414.42807l146.07,43.58l-2.59,171.33l-126.69,-67.76l-16.79,-147.15z"/>
+     <path id="path2776" fill="url(#linearGradient3047)" d="m153.175597,457.46807l90.179,-63.75l-22.857,145l-72.232,90.536l4.9107,-171.79l-0.0007,0.004z"/>
+     <path id="path2778" fill="url(#linearGradient3049)" d="m151.925597,455.85807l-147.14,-41.43l98.04,-47.67l140.71,26.78l-91.61,62.32z"/>
+     <path id="path11664" fill-opacity="0.79358" fill="#fff" d="m148.265597,629.33807l5.1786,-171.7l90,-63.929l-91.518,61.964l-147.14,-41.24l145.89,43.75l-2.4107,171.16l0.0001,-0.005z"/>
+    </g>
+   </g>
+  </g>
+  <text fill="#000000" stroke-width="0" x="150.739194" y="236.423368" id="svg_1" font-size="75" font-family="'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif" text-anchor="start" xml:space="preserve" transform="rotate(15 207.6601257324215,261.00244140624994) matrix(2.443715093806935,0,0,1.5811657430628823,-329.1744520149791,-71.51178348366827) " stroke="#000">just-</text>
+  <text fill="#000000" stroke-width="0" x="287.563077" y="203.261622" id="svg_3" font-size="75" font-family="'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif" text-anchor="start" xml:space="preserve" transform="rotate(-34 509.69140624999983,231.3403930664064) matrix(1.7611191157021662,0,0,1.7002854347228997,-125.2057841490576,-70.34071245779478) " stroke="#000">core</text>
+ </g>
+</svg>
