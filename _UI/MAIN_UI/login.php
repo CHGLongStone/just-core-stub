@@ -21,7 +21,8 @@ $LOGIN_SERVICE = new JCORE\SERVICE\AUTH\LOGIN_SERVICE(); //$AUTH_HARNESS
 
 		if(isset($authCheck["status"]) && "OK" == $authCheck["status"]){
 
-			$USER_ENTITY = new SERVICE\USER\USER_ENTITY();
+		
+			$USER_ENTITY = new JCORE\SERVICE\CLIENT\USER_ENTITY();
 			$_SESSION['user_id'] = $authCheck["user_id"];
 			$_SESSION['comp_id'] = $authCheck["comp_id"];
 			$_SESSION['role_id'] = $authCheck["role_id"];

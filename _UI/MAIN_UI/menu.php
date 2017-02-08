@@ -84,8 +84,8 @@ function generateMenuTemplater($args= null){
 	$navArray = 'navarray';
 	
 	$TEMPLATER = new JCORE\TEMPLATER\TEMPLATER();
-	$test = $TEMPLATER->set_filenames(array($navItem => JCORE_TEMPLATES_DIR.'METRONIC/COMPONENTS/MENU/left-nav.link.html'));
-	$test = $TEMPLATER->set_filenames(array($navArray => JCORE_TEMPLATES_DIR.'METRONIC/COMPONENTS/MENU/left-nav.array.html'));
+	$test = $TEMPLATER->set_filenames(array($navItem => JCORE_TEMPLATES_DIR.'HTML/COMPONENTS/MENU/left-nav.link.html'));
+	$test = $TEMPLATER->set_filenames(array($navArray => JCORE_TEMPLATES_DIR.'HTML/COMPONENTS/MENU/left-nav.array.html'));
 	$elementString = '';
 	$ELEMENTS = '';
 	

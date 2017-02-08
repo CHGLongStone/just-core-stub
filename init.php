@@ -48,9 +48,9 @@ if (file_exists('vendor/autoload.php')) {
 
 	/***
 	* initialize the DB connectors 
+	* echo __FILE__.'@'.__LINE__.'$getDSN<pre>'.var_export($getDSN, true).'</pre><br>';
 	*/	
 	$getDSN = $GLOBALS["CONFIG_MANAGER"]->getSetting('DSN');
-
 
 	$GLOBALS['DATA_API'] = new JCORE\DATA\API\DATA_API($getDSN);
 

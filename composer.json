@@ -25,7 +25,8 @@
 		"just-core/http-optimization" : "dev-master",
 		"just-core/data-postgres" :  "dev-master",
 		"just-core/metronic" :  "dev-master",
-		"just-core/wiki-pages" :  "dev-master"
+		"just-core/wiki-pages" :  "dev-master",
+		"ircmaxell/password-compat" : "v1.0.4"
 	},
 	"suggest": {
 		"just-core/foundation": "PHP Enterprise (HA) High Availability Framework, develop quick and simple, deploy quick and consistent",

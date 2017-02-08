@@ -14,7 +14,7 @@ function getHTMLHeader(){
 	$TEMPLATER = $GLOBALS["TEMPLATER"];
 	#$ps_template_service = '1service';
 	$HTMLHeader = 'HTML_Header';
-	$CFG = $GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'JUST_CORE');
+	$CFG = $GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'STATIC_ASSETS_GLOBAL');
 	$TEMPLATER->set_filenames(array($HTMLHeader => JCORE_TEMPLATES_DIR.'HTML/COMPONENTS/HEAD/head.html'));
 	/*
 	echo 'here: '.__FUNCTION__.'@'.__LINE__.' $CFG==<pre>'.var_export($CFG, true).'</pre><br>'.PHP_EOL;

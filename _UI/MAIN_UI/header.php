@@ -4,9 +4,9 @@
 */
 require_once 'harness.php';
 if(1 == $_SESSION['role_id']){
-	$logoUserVer = '/assets/img/white.jpeg';
+	$logoUserVer = '/assets/images/justcore_logo.svg';
 }else{
-	$logoUserVer = '/assets/img/angrycat.jpeg';
+	$logoUserVer = '/assets/images/angrycat.jpeg';
 	
 }
 
@@ -19,7 +19,7 @@ if(1 == $_SESSION['role_id']){
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="/index.php">
-				<img src="<?echo $logoUserVer;?>" alt="logo" class="logo-default"/>
+				<img src="<?echo $logoUserVer;?>" alt="logo" height="62" width="62" class="logo-default"/>
 			</a>
 		</div>
 		<!-- END LOGO -->

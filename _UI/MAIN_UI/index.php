@@ -24,7 +24,7 @@ require_once 'harness.php';
 
 #password_hash("rasmuslerdorf", PASSWORD_DEFAULT)
 
-$USER_ENTITY = new SERVICE\USER\USER_ENTITY();
+$USER_ENTITY = new JCORE\SERVICE\CLIENT\USER_ENTITY();
 /**
 $args = array(
 	'HASH' => array(),

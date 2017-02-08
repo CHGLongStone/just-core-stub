@@ -24,12 +24,12 @@ function getEndOfPageScripts(){
 	$TEMPLATER = $GLOBALS["TEMPLATER"];
 	$ps_template_service = '1service';
 	$end_of_page_scripts = 'end_of_page_scripts';
-	$CFG = $GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'JUST_CORE');
+	$CFG = $GLOBALS['CONFIG_MANAGER']->getSetting($LOAD_ID = 'STATIC_ASSETS_GLOBAL');
 	#echo 'here: '.__FUNCTION__.'@'.__LINE__.' $CFG==<pre>'.var_export($CFG["ROUTES"], true).'</pre><br>'.PHP_EOL;
 	#echo 'here: '.__FUNCTION__.'@'.__LINE__.' $CFG==<pre>'.var_export(array_keys($CFG["ROUTES"]), true).'</pre><br>'.PHP_EOL;
 		
 	$TEMPLATER->set_filenames(array($ps_template_service => JCORE_TEMPLATES_DIR.'JS/form_service_method.js'));
-	$TEMPLATER->set_filenames(array($end_of_page_scripts => JCORE_TEMPLATES_DIR.'HTTP/COMPONENTS/ENDOFPAGE/endofpage.v1.html'));
+	$TEMPLATER->set_filenames(array($end_of_page_scripts => JCORE_TEMPLATES_DIR.'HTML/COMPONENTS/ENDOFPAGE/endofpage.v1.html'));
 	
 	if(!isset($GLOBALS["ASSETIC_WRAPPER"])){
 		$GLOBALS["ASSETIC_WRAPPER"] = new JCORE\SERVICE\HTTP_OPTIMIZATION\ASSETIC\ASSETIC_WRAPPER(); 
@@ -63,12 +63,12 @@ function getEndOfPageScripts(){
 	new Fingerprint2(fPrintOptions).get(function(result){
 		console.log("result:"+result);
 		//$("#canvas_fingerprint").val(result);
-		BW.canvas_fingerprint = result;
-		console.log("BW.canvas_fingerprint:"+BW.canvas_fingerprint);
+		JCORE.canvas_fingerprint = result;
+		console.log("JCORE.canvas_fingerprint:"+JCORE.canvas_fingerprint);
 	});
 	
 	
-	//canvas_fingerprint = BW.canvas_fingerprint;
+	//canvas_fingerprint = JCORE.canvas_fingerprint;
 	//console.log("canvas_fingerprint:"+canvas_fingerprint);
 
 	digital_fingerprint = new Fingerprint({canvas: true}).get();

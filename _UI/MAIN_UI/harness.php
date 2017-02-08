@@ -216,7 +216,7 @@ if(true === $PAGE_TEST){
 	);
 */
 
-$RBAC = new JCORE\AUTH\CRUDE_ACL();
+$RBAC = new JCORE\SERVICE\AUTH\CRUDE_ACL();
 
 /**
 * We'll also add an Audit service here 

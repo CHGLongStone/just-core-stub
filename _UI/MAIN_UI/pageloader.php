@@ -22,8 +22,8 @@ if(isset($GLOBALS["view"])){
 }
 
 
+#echo 'here: '.__FILE__.'@'.__LINE__.' $load_path==<pre>'.var_export($GLOBALS["load_path"], true).'</pre><br>';
 /*
-echo 'here: '.__FILE__.'@'.__LINE__.' $load_path==<pre>'.var_export($GLOBALS["load_path"], true).'</pre><br>';
 echo 'here: '.__FILE__.'@'.__LINE__.' $route==<pre>'.var_export($GLOBALS["route"], true).'</pre><br>';
 #echo 'here: '.__FILE__.'@'.__LINE__.' SERVICE\WIKI\WIKI::isWIKIPage()==<pre>'.\SERVICE\WIKI\WIKI::isWIKIPage().'</pre><br>';
 echo 'here: '.__FILE__.'@'.__LINE__.' $load_path==['.$_SERVER["DOCUMENT_ROOT"].'/'.$load_path.'.php'.']<br>';
@@ -36,9 +36,9 @@ if(file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$load_path.'.php')){
 	require_once $_SERVER["DOCUMENT_ROOT"].'/'.$load_path.'.php';
 	
 }else{
-	$WIKI = new \SERVICE\WIKI\WIKI();
+	$WIKI = new JCORE\SERVICE\UI\WIKI();
 	if(true === $WIKI->isWIKIPage()){
-		#echo 'isWIKIPage'.PHP_EOL;
+		echo 'isWIKIPage'.PHP_EOL;
 		echo '
 		<div class="row">
 			<div class="col-md-9">
@@ -55,8 +55,8 @@ if(file_exists($_SERVER["DOCUMENT_ROOT"].'/'.$load_path.'.php')){
 		/**
 		* load the template direct, don't do any processing
 		#echo '@'.__LINE__.'$loadPath['.$loadPath.'.php]';
-		echo 'here: '.__FILE__.'@'.__LINE__.' $loadPath==<pre>'.var_export($_SERVER["DOCUMENT_ROOT"].'/'.$loadPath.'.php', true).'</pre><br>';
 		*/
+		#echo 'here: '.__FILE__.'@'.__LINE__.' $loadPath==<pre>'.var_export($_SERVER["DOCUMENT_ROOT"].'/'.$loadPath.'.html', true).'</pre><br>';
 		$loadPath = JCORE_TEMPLATES_DIR.'HTML/'.$loadPath.'.html';
 		#echo 'here: '.__FILE__.'@'.__LINE__.' $load_path==<pre>'.var_export($GLOBALS["load_path"], true).'</pre><br>';
 		echo file_get_contents( $loadPath);

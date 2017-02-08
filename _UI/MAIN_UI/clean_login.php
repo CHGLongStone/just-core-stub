@@ -19,7 +19,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="index.html">
-	<img src="/assets/img/White.jpeg" alt=""/>
+	<img src="assets/images/just-core-icon.png" alt=""/>
 	</a>
 </div>
 <!-- END LOGO -->

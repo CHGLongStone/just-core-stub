@@ -106,11 +106,11 @@ function usage(){
 ${GREEN}Common usages, I want to:${NC}
 	
 		${GREEN}- $AUTOLOAD${NC}
-			./install.sh -cC
+			./install.sh -cA
 		${GREEN}- $UPDATE ${NC}
 			./install.sh -cU
 		${GREEN}- $INSTALL ${NC}
-			./install.sh -cU
+			./install.sh -cI
 		${GREEN}- Create a ${CYAN}Fresh${GREEN} install the Stub Application ${CYAN}$INCLUDE${NC}
 			${GREEN}- ${CYAN}AND I've UPDATEDDB Access credentials${GREEN}  in ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
 				./install.sh -cU -dFORCE
