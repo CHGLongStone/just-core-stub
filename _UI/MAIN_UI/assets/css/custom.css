@@ -233,7 +233,7 @@ pre {
 .page-content {
 	margin-top: 0px;
 	padding: 0px;
-	background: #ffffff url(/assets/images/transparent_isometric_cube.svg) no-repeat right top scroll;
+	background:  url(/assets/images/transparent_isometric_cube.svg) no-repeat right top scroll;
 	/*
 	background-color: rgba(200,200,200,.8) ;
 	*/
