@@ -16,7 +16,7 @@
 	"require" : {
 		"php" : ">=5.3.7",
 		"just-core/foundation" : "dev-master",
-		"just-core/audit-entity" : "v0.7.0+",
+		"just-core/audit-entity" : ">v0.7.0",
 		"just-core/auth-crude-acl" : "v0.7.0",
 		"just-core/auth-login" : "v0.7.0",
 		"just-core/auth-page" : "v0.7.0",
