@@ -31,11 +31,11 @@ return array(
 
 					
 				),
+				/**
 				'PAGE_LEVEL_PLUGINS' => array(
 
 					
 				),
-				/**
 				'PAGE_LEVEL_SCRIPTS' => array(
 					array(
 						'SRC'	=> '  src="/assets/scripts/d3.v3.js"', 
