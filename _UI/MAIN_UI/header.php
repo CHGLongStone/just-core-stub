@@ -24,7 +24,7 @@ if(1 == $_SESSION['role_id']){
 		</div>
 		<!-- END LOGO -->
 		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-			<!-- REQUIRED FOR MIBILE -->
+			<!-- REQUIRED FOR MOBILE -->
 		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
 		</a>
 		<!-- END RESPONSIVE MENU TOGGLER -->
