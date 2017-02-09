@@ -112,8 +112,8 @@ return array(
 				* the raw src= definition is included because the browser will ignore
 				* anything in the body of the script if the src attribute is defined
 				*/
-				'SRC' => '  src="/assets/plugins/jquery.min.js" ', 
 				'SRC' => '  src="/assets/plugins/jquery.js" ', 
+				'SRC' => '  src="/assets/plugins/jquery.min.js" ', 
 				'TYPE'	=> ' type="text/javascript" ',
 				#'BODY' => '',
 			),
