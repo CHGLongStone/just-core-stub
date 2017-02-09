@@ -240,4 +240,6 @@ pre {
 	color: #000;
 }
 	
-	
+.error {
+  color: red;
+}

@@ -46,23 +46,42 @@
     <div class="container inner page-content" style="padding: 20px;" >
       <div class="row" style="display: block;align-items: center; margin: 20px;">
 		  <br>
-		  this is a publicly accessible spash page <br>
+		  this is a publicly accessible splash page <br>
 		  your http path seems to be set up correctly<br>
 		  <br>
-		  Next:<br>
-		  you need to run the install script <span>./install.sh</span><br>
-		  you will also need to make the cache directory writeable for the application server<br>
-		  this [install_dir]/CACHE/* by default<br>
-		  execute <span>./install.sh</span> with out arguments to see the usage <br>
+		  Nextyou need to:<br>
+		  <ul>
+			  <li>
+				make sure the database connection is set
+				<ul>
+					<li>/CONFIG/AUTOLOAD/data.[global|local].php</li>
+				</ul>
+			  </li>
+			  <li>
+				make the cache directory writeable for the application server
+				<ul>
+					<li>this /CACHE/* by default</li>
+				</ul>
+			  </li>
+			  <li>
+				run composer to pull in the project dependencies 
+			  </li>
+			  
+		  </ul>
+		
+		you can do all of this  the install script <span>./install.sh</span>
+		
+		execute <span>./install.sh</span> with out arguments to see the usage <br>
 		  
 		  
 		  click "Login" below to see the secured section<br>
-		  if you see the error <span class="error">Fatal error: Class 'JCORE\AUTH\AUTH_HARNESS' not found</span><br>
-		  <br>
+		  
+		  Default Credentials <br>
+		  usr: user@domain.com<br>
+		  pwd: just-core<br>
+		  
 		  <br>
 		  <li><a href="login.php">Login</a></li>
-		  <br>
-		  <br>
 		  <br>
 		  <br>
 		  <br>

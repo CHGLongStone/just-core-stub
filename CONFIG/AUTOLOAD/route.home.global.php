@@ -35,6 +35,7 @@ return array(
 
 					
 				),
+				/**
 				'PAGE_LEVEL_SCRIPTS' => array(
 					array(
 						'SRC'	=> '  src="/assets/scripts/d3.v3.js"', 
@@ -51,10 +52,8 @@ return array(
 						'TYPE'	=> ' type="text/javascript" ',
 						#'BODY' => '',
 					),
-					
-		
-					
 				),
+				*/
 				'PAGE_LEVEL_ONLOAD' => array(
 					/*
 					*/
@@ -63,9 +62,11 @@ return array(
 						'TYPE'	=> ' type="text/javascript" ',
 						'BODY' => '
 							jQuery(document).ready(function() {    
-								//Login.init(); // init quick sidebar
+								/*
+								Login.init(); // init quick sidebar
 								var myFlower = new CodeFlower("#visualization", 1300, 1200);
 								myFlower.update(just_core_flower);
+								*/
 							});
 						',
 					),

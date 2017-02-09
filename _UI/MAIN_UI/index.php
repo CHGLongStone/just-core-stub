@@ -96,7 +96,7 @@ if(isset($_SERVER["REDIRECT_URL"])){
 	
 	
 	#$buildNum = @include 'build.txt';
-	$buildNum = file_get_contents( 'build.txt');
+	@$buildNum = file_get_contents( 'build.txt');
 	/*
 	$TEMPLATER->assign_vars( array(	
 		'TITLE' => $BODY_TITLE.'--'.$buildNum
