@@ -86,7 +86,7 @@ body,.login{
   background-size: cover;
 }
 
-/**
+/*
 * beautiful image from http://lbc9.net/digital-art/fractals/black-and-white-fractals/wallpapers-5.html
 * matrix-lines-fractal-hd-1080p.jpg
 * http://www.fractal-recursions.com/files/mech0030.html 
@@ -233,7 +233,7 @@ pre {
 .page-content {
 	margin-top: 0px;
 	padding: 0px;
-	background:  url(/assets/images/transparent_isometric_cube.svg) no-repeat right top scroll;
+	background: #ffffff url(/assets/images/transparent_isometric_cube.svg) no-repeat right top scroll;
 	/*
 	background-color: rgba(200,200,200,.8) ;
 	*/

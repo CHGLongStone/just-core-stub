@@ -113,6 +113,7 @@ return array(
 				* anything in the body of the script if the src attribute is defined
 				*/
 				'SRC' => '  src="/assets/plugins/jquery.min.js" ', 
+				'SRC' => '  src="/assets/plugins/jquery.js" ', 
 				'TYPE'	=> ' type="text/javascript" ',
 				#'BODY' => '',
 			),

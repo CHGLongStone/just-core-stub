@@ -23,7 +23,7 @@ return array(
 					),
 					
 					array(
-						'HREF' => "https://fonts.googleapis.com/css?family=Rosario:400,700", 
+						'HREF' => 'https://fonts.googleapis.com/css?family=Rosario:400,700', 
 						'REL' => ' rel="stylesheet"', 
 						'TYPE' => ' type="text/css"',
 					),
