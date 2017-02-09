@@ -26,7 +26,7 @@
 		"just-core/data-postgres" :  ">=v0.7.0",
 		"just-core/metronic" :  ">=v0.7.0",
 		"just-core/wiki-pages" :  ">=v0.7.0",
-		"ircmaxell/password-compat" : ">=v1.0.4"
+		"ircmaxell/password-compat" : "v1.0.4"
 	},
 	"suggest": {
 		"just-core/foundation": "PHP Enterprise (HA) High Availability Framework, develop quick and simple, deploy quick and consistent",
@@ -36,7 +36,6 @@
 		"just-core/dao-orm": "Object Relational Manager Stub extends Data Access Object for the just-core eco system",
 		"just-core/http-optimization": "Static asset management, js, css etc. Wrapper for the Assetic project to composite assets and minify to reduce http load requests and times",
 		"just-core/metronic": "support for keenthemes metronic templates in the just-core eco system"
-
 	},
 	"autoload" : {
 		"classmap" : [
