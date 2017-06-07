@@ -296,7 +296,7 @@ ${GREEN}y${NC} to CHANGE ${CYAN}[enter]${NC} to continue ${NC}"
 			$SCHEMA_PATH=$new_file_path
 	fi;
 	
-	
+	databaseGetCreds
 	
 	echo $SCHEMA_PATH'  | mysql --port='${DB_CREDS[port]}' --host='${DB_CREDS[host]}'  -u'${DB_CREDS[username]}' -p'${DB_CREDS[password]}' '${DB_CREDS[database]}';'
 	cat $SCHEMA_PATH  | mysql --port=${DB_CREDS[port]} --host=${DB_CREDS[host]} -u${DB_CREDS[username]} -p${DB_CREDS[password]} ${DB_CREDS[database]}
