@@ -112,7 +112,7 @@ ${GREEN}Common usages, I want to:${NC}
 		${GREEN}- $INSTALL ${NC}
 			./install.sh -cI
 		${GREEN}- Create a ${CYAN}Fresh${GREEN} install the Stub Application ${CYAN}$INCLUDE${NC}
-			${GREEN}- ${CYAN}AND I've UPDATEDDB Access credentials${GREEN}  in ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
+			${GREEN}- ${CYAN}AND I've UPDATED DB Access credentials${GREEN}  in ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
 				./install.sh -cU -dFORCE
 			${GREEN}- I want to enter my current credentials and ${RED}OVER WRITE${GREEN} ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
 				./install.sh -cU -dWRITE

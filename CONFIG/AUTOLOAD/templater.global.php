@@ -79,17 +79,89 @@ return array(
 				'DATA' => 'Tech',
 				'SUB_ITEMS' => array(
 					array(
-						'NAME' => 'Overview/FAQ',
-						'HREF' => '/WIKI/index',
-						'ICON_CLASS' => 'icon-direction',
-						'DATA' => 'Tech/WIKI',
+						'NAME' => 'FAQ',
+						'HREF' => '/WIKI/FAQ',
+						'ICON_CLASS' => 'icon-directions',
+						'DATA' => 'Tech/WIKI/FAQ',
 					),
 					array(
 						'NAME' => 'Class Documentation',
-						'HREF' => '/WIKI/api/index',
+						'HREF' => '/docs/api',
 						'ICON_CLASS' => 'icon-compass',
-						'DATA' => 'Tech/WIKI/API-Setup',
+						'DATA' => 'Tech/WIKI/Class-Documentation',
 					),
+					
+					array(
+						'NAME' => 'Overview',
+						'HREF' => 'javascript:;',
+						'ICON_CLASS' => 'icon-direction',
+						'DATA' => 'Tech/WIKI/Overview',
+						'SUB_ITEMS' => array(
+							array(
+								'NAME' => 'APIs',
+								'HREF' => '/WIKI/APIs',
+								'ICON_CLASS' => 'icon-direction',
+								'DATA' => 'Tech/WIKI/Overview/APIs',
+							),
+							array(
+								'NAME' => 'Load',
+								'HREF' => '/WIKI/Load',
+								'ICON_CLASS' => 'icon-direction',
+								'DATA' => 'Tech/WIKI/Overview/Load',
+							),
+							array(
+								'NAME' => 'Configuration',
+								'HREF' => '/WIKI/Configuration',
+								'ICON_CLASS' => 'icon-direction',
+								'DATA' => 'Tech/WIKI/Overview/Configuration',
+							),
+							array(
+								'NAME' => 'Dependency Management',
+								'HREF' => '/WIKI/Dependency-Management',
+								'ICON_CLASS' => 'icon-direction',
+								'DATA' => 'Tech/WIKI/Overview/Dependency-Management',
+							),
+						)
+						
+					),
+
+					array(
+						'NAME' => 'Project Installation',
+						'HREF' => '/WIKI/Project-Installation',
+						'ICON_CLASS' => 'icon-direction',
+						'DATA' => 'Tech/WIKI/Project-Installation',
+					),
+					array(
+						'NAME' => 'Scripts',
+						'HREF' => '/WIKI/Scripts',
+						'ICON_CLASS' => 'icon-direction',
+						'DATA' => 'Tech/WIKI/Scripts',
+					),
+					array(
+						'NAME' => 'Summary',
+						'HREF' => '/WIKI/Summary',
+						'ICON_CLASS' => 'icon-direction',
+						'DATA' => 'Tech/WIKI/Summary',
+					),
+					array(
+						'NAME' => 'stub_AJAX-example',
+						'HREF' => '/WIKI/Summary',
+						'ICON_CLASS' => 'icon-direction',
+						'DATA' => 'Tech/WIKI/stub_AJAX-example',
+					),
+					
+					
+					array(
+						'NAME' => 'Project Structure',
+						'HREF' => '/WIKI/Project-Structure',
+						'ICON_CLASS' => 'icon-direction',
+						'DATA' => 'Tech/WIKI/Project-Structure',
+						'SUB_ITEMS' => array(
+						
+						),
+					),
+					
+
 					array(
 						'NAME' => 'API RAW CALL',
 						'HREF' => '/APICall',
@@ -98,6 +170,7 @@ return array(
 					),
 				),
 			),
+
 			array(
 				'NAME' => 'Contact',
 				'HREF' => '/Contact',
