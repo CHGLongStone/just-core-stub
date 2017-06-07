@@ -1,4 +1,4 @@
-##Project First Time Install
+## Project First Time Install
 
 ### Prerequisites 
 
@@ -52,19 +52,6 @@ Command line interface with cron harness example, requires:
 * execution be from the php command line api 
 
 
-
-
-
-
-
-
-
-## Further Configuration of just-core 
-
-  The configuration files are in `./CONFIG/AUTOLOAD/`
-
-see [Configuration](Configuration) for further details
-
 ### Example (Virtual) Host directives
   * determine the base install you would like
  
@@ -106,3 +93,14 @@ see [Configuration](Configuration) for further details
 #### typical command line focused install
 
 - `[base_path]/[install_instance]/APIS/CLI`
+
+
+
+
+
+
+## Further Configuration of just-core 
+
+  The configuration files are in `./CONFIG/AUTOLOAD/`
+
+see [Configuration](Configuration) for further details
