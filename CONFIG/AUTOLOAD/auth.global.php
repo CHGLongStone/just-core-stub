@@ -8,7 +8,7 @@
 * write a regex to compare by subnet mask rather than specific IP's
 *
 */
-
+$DSN = 'JCORE';
 return array(
     'AUTH' => array(
 		'IP_WHITELIST' => array(
@@ -49,7 +49,7 @@ return array(
 		'LOGIN_SERVICE' => array(
 			'AUTH_TYPE' => array(
 				'USER' => array(
-					'DSN' => 'JCORE',
+					'DSN' => $DSN,
 					'table' => 'client_user',
 					'pk_field' => 'client_user_pk',
 					'foundation' => true,
@@ -58,7 +58,7 @@ return array(
 					#),
 				),
 				'SESSION' => array(
-					'DSN' => 'JCORE',
+					'DSN' => $DSN,
 					'table' => 'client_user',
 					'pk_field' => 'client_user_pk',
 					'foundation' => true,
@@ -67,7 +67,7 @@ return array(
 					#),
 				),
 				'API' => array(
-					'DSN' => 'JCORE',
+					'DSN' => $DSN,
 					'table' => 'client',
 					'pk_field' => 'client_pk',
 					'foundation' => true,
@@ -108,14 +108,14 @@ return array(
 		),
 		'ACL_ENTITY_CONTAINER' => array(
 			'ROLE' => array(
-				'DSN' => 'JCORE',
+				'DSN' => $DSN,
 				'table' => 'user_role',
 				'pk_field' => 'user_role_pk',
 				'fk_field' => 'user_role_fk',
 				'user_role' => 'role',
 			),
 			'RULE' => array(
-				'DSN' => 'JCORE',
+				'DSN' => $DSN,
 				'SELECT' => '*, rule_name AS rule',
 				'table' => 'access_control_list',
 				'pk_field' => 'access_control_list_pk',
