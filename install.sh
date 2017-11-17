@@ -472,30 +472,4 @@ cat <<EOUSAGE
 stuff...
 EOUSAGE
 
-	echo " 
-<?php
-
-$ENVPATH = '$DIR';
-$CACHEPATH = $dval'/CACHE';
-
-$PLUGINSPATH = $dval'/PLUGINS';
-$PACKAGESPATH = 'PACKAGES';
-$LOGPATH = '/var/log/apache2/';
-?>	
-	
-	" > $dval/env.php
-	
-	
-	
-	[client]
-	host=your_db_hostname
-	database=my_database
-	user=my_username
-	password="my_secret_passord"
-	
-                [client]
-                host=your_db_hostname
-                database=my_database
-                user=my_username
-                password="my_secret_passord"
 
