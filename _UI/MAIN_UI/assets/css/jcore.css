@@ -1,0 +1,13 @@
+/**
+* something to fill the space, ripped from 
+* http://www.csszengarden.com/217/
+*/
+
+	body,
+	input,
+	textarea 	{ color:#333; /*-webkit-font-smoothing:antialiased;*/ } 
+
+	/* Families */
+	body	{ font-family:"tablet-gothic", verdana, arial, sans-serif; /* Weights from Typekit: 300, 400 */ }
+	h2,
+	h3	{ font-family:"tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif; /* Weights from Typekit: 200, 900 */ }
