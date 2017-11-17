@@ -1,8 +1,11 @@
 # Project Summary
 
 This project is an example of how to use the [just-core framework](https://chglongstone.github.io/just-core) 
+The project is set up as a series of simple introductions to different aspects of the framework and this documentation 
+itself is included as an example of the [just-core-wiki-pages](https://chglongstone.github.io/just-core-wiki-pages) service.
 
-see the summary [here:](Summary)
+
+see the Project Vision [here:](Summary)
 
 ## Assumptions 
 

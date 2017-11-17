@@ -1,5 +1,12 @@
 # Project Vision 
 
+The whole point of technology should be to make life easier. It should be designed around the business processes and procedures 
+rather that having people do contortionist acts to work with poorly designed software. The same should hold true for the people 
+who are building the software. 
+
+The project was started to collect the efforts of a single developer who had the good fortune of working in large distributed 
+LAMP environments since the early days of PHP 4 
+
 Given that just-core is designed to support Enterprise level applications it implements a SOA (Service Oriented Architecture) 
 with core services conforming to the format of the ESB (Enterprise Service Bus). 
 
@@ -19,6 +26,7 @@ Services are called by name-space via the transport layer in their native transp
 the service in the format `[serviceName][methodName]` with the arguments being supplied as the transport envelope dictates. 
 
 When the response to the service call has been processed the service will respond in the format dictated for the API 
+
  * AjAX->JSON-RPC
  * ReST->JSON
  * ReST->URI_ENCODED

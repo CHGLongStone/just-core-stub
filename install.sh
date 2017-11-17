@@ -112,7 +112,7 @@ ${GREEN}Common usages, I want to:${NC}
 		${GREEN}- $INSTALL ${NC}
 			./install.sh -cI
 		${GREEN}- Create a ${CYAN}Fresh${GREEN} install the Stub Application ${CYAN}$INCLUDE${NC}
-			${GREEN}- ${CYAN}AND I've UPDATEDDB Access credentials${GREEN}  in ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
+			${GREEN}- ${CYAN}AND I've UPDATED DB Access credentials${GREEN}  in ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
 				./install.sh -cU -dFORCE
 			${GREEN}- I want to enter my current credentials and ${RED}OVER WRITE${GREEN} ./CONFIG/AUTOLOAD/data.${YELLOW}global${GREEN}.php${NC}
 				./install.sh -cU -dWRITE
@@ -296,7 +296,7 @@ ${GREEN}y${NC} to CHANGE ${CYAN}[enter]${NC} to continue ${NC}"
 			$SCHEMA_PATH=$new_file_path
 	fi;
 	
-	
+	databaseGetCreds
 	
 	echo $SCHEMA_PATH'  | mysql --port='${DB_CREDS[port]}' --host='${DB_CREDS[host]}'  -u'${DB_CREDS[username]}' -p'${DB_CREDS[password]}' '${DB_CREDS[database]}';'
 	cat $SCHEMA_PATH  | mysql --port=${DB_CREDS[port]} --host=${DB_CREDS[host]} -u${DB_CREDS[username]} -p${DB_CREDS[password]} ${DB_CREDS[database]}
@@ -472,30 +472,4 @@ cat <<EOUSAGE
 stuff...
 EOUSAGE
 
-	echo " 
-<?php
-
-$ENVPATH = '$DIR';
-$CACHEPATH = $dval'/CACHE';
-
-$PLUGINSPATH = $dval'/PLUGINS';
-$PACKAGESPATH = 'PACKAGES';
-$LOGPATH = '/var/log/apache2/';
-?>	
-	
-	" > $dval/env.php
-	
-	
-	
-	[client]
-	host=your_db_hostname
-	database=my_database
-	user=my_username
-	password="my_secret_passord"
-	
-                [client]
-                host=your_db_hostname
-                database=my_database
-                user=my_username
-                password="my_secret_passord"
 
