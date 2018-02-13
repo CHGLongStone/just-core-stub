@@ -1,7 +1,7 @@
 {
 	"name" : "just-core/stub",
 	"description" : "Stub application for the just-core eco system, see how simple it is...",
-	"license" : "GNU",
+	"license" : "MIT",
 	"keywords" : [
 		"Stub",
 		"just-core",
